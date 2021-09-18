@@ -1,10 +1,24 @@
-name: "."
-title: "DFR Blog"
+name: "dfrblog"
+title: "Dzulfiqar Fathur Rahman"
 description: |
-  DFR Blog
+  Dzulfiqar Fathur Rahman's blog about all things data analysis and visualizations
+base_url: https://dfrblog.netlify.app/
+repository_url: https://github.com/dzulfiqarfr/dfrblog
+collections:
+  posts:
+    share: [twitter, facebook, linkedin]
+    citations: false
+    authors_metadata: false
 output_dir: "_site"
 navbar:
   right:
-    - text: "About"
-      href: about.html
+    - text: "Blog"
+      href: blog.html
+    - text: "Projects"
+      href: projects.html
+    - icon: fa fa-rss
+      href: blog.xml
+twitter:
+  creator: "@dzulfiqarfr"
+creative_commons: CC BY
 output: distill::distill_article

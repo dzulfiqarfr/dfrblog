@@ -1,0 +1,116 @@
+---
+title: "Projects"
+description: |
+  I really enjoy working on (side) projects related to data analysis and visualizations, especially on social and economic issues. I also love trying to make life slightly easier by building tools, such as R packages. I hope you find them just as useful
+output: distill::distill_article
+---
+
+```{r Setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{css}
+* {
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px 15px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  padding: 0px;
+  text-align: left;
+  background-color: white;
+  border-bottom-style: solid;
+  border-color: #CFD8DC
+}
+
+.card-title {
+  font-weight: bold; 
+}
+
+.card-date {
+  color: #999;
+  font-weight: bold;
+}
+
+.card-description {
+  color: #999;
+}
+```
+
+```{r Card container}
+library(htmltools)
+
+create_card <- function(title, 
+                        date,
+                        description,
+                        url,
+                        image_source) {
+  
+  card <- tags$div(
+    class = "column",
+    tags$div(
+      class = "card",
+      tags$a(
+        href = url,
+        target = "_blank",
+        tags$img(src = image_source, style = "width:100%"),
+        tags$div(class = "card-title", title),
+        tags$div(class = "card-date", date),
+        tags$div(class = "card-description", description)
+      )
+    )
+  )
+  
+  return(card)
+  
+}
+
+tags$div(
+
+  # jakpoststyle
+  create_card(
+    title = "jakpoststyle",
+    date = "January 2021",
+    description = "An R package to edit Datawrapper chart properties with an unofficial custom theme of The Jakarta Post",
+    url = "https://dzulfiqarfr.github.io/jakpoststyle/",
+    image_source = "images/jakpoststyle_social_media_card.png"
+  ),
+  
+  # Indonesia EconRecovery ----
+  create_card(
+    title = "Indonesia EconRecovery",
+    date = "November 2020",
+    description = "Charts and tables to track Indonesia’s economic recovery from the COVID-19 pandemic",
+    url = "https://dzulfiqarfr.github.io/indonesia-recovery-tracker/",
+    image_source = "images/ier_social_media_card.png"
+  )
+  
+)
+```
+
