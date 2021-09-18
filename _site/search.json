@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-09-18T16:47:30+07:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Dzulfiqar Fathur Rahman",
+      "author": [],
+      "contents": "\r\n\r\n          \r\n          \r\n          DFR Blog\r\n          \r\n          \r\n          About\r\n          ☰\r\n          \r\n          \r\n      \r\n        \r\n          \r\n            Dzulfiqar Fathur Rahman\r\n          \r\n          \r\n            \r\n              Hi! I am a journalist covering the economy for The Jakarta Post. I love analyzing data to tell stories and talking to people to better understand the data that represent them. I also build tools to improve my workflow for writing stories and creating data visualizations\r\n            \r\n            \r\n              Hi! I am a journalist covering the economy for The Jakarta Post. I love analyzing data to tell stories and talking to people to better understand the data that represent them. I also build tools to improve my workflow for writing stories and creating data visualizations\r\n            \r\n          \r\n\r\n          \r\n            \r\n              \r\n                  \r\n                    \r\n                      LinkedIn\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      Twitter\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      GitHub\r\n                    \r\n                  \r\n                \r\n                              \r\n          \r\n\r\n          \r\n            \r\n              \r\n                                \r\n                  \r\n                    LinkedIn\r\n                  \r\n                \r\n                                \r\n                  \r\n                    Twitter\r\n                  \r\n                \r\n                                \r\n                  \r\n                    GitHub\r\n                  \r\n                \r\n                              \r\n            \r\n          \r\n        \r\n      \r\n    \r\n\r\n    \r\n    \r\n    ",
+      "last_modified": "2021-09-18T16:47:30+07:00"
+    }
+  ],
+  "collections": []
+}

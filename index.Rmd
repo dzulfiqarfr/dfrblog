@@ -1,0 +1,18 @@
+---
+title: "Dzulfiqar Fathur Rahman"
+image: "images/profile_photo.jpeg"
+links:
+  - label: LinkedIn
+    url: "https://linkedin.com/in/dzulfiqarfr/"
+  - label: Twitter
+    url: "https://twitter.com/dzulfiqarfr"
+  - label: GitHub
+    url: "https://github.com/dzulfiqarfr"
+site: distill::distill_website
+output:
+  postcards::jolla
+---
+ 
+Hi! I am a journalist covering the economy for The Jakarta Post. I love analyzing data to tell stories and talking to people to better understand the data that represent them. I also build tools to improve my workflow for writing stories and creating data visualizations
+
+
