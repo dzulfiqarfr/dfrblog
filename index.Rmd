@@ -8,6 +8,8 @@ links:
     url: "https://twitter.com/dzulfiqarfr"
   - label: GitHub
     url: "https://github.com/dzulfiqarfr"
+  - label: Email
+    url: "mailto:frdzulfiqar@gmail.com"
 site: distill::distill_website
 output:
   postcards::jolla
