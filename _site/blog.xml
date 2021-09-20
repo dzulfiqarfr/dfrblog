@@ -7,14 +7,18 @@
     <description>Dzulfiqar Fathur Rahman's blog about all things data analysis and visualizations
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 18 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Sep 2021 00:00:00 +0000</lastBuildDate>
     <item>
-      <title>welcome</title>
-      <dc:creator>Unknown</dc:creator>
-      <link>https://dfrblog.netlify.app/posts/2021-09-18-welcome</link>
-      <description>A short description of the post.</description>
-      <guid>https://dfrblog.netlify.app/posts/2021-09-18-welcome</guid>
-      <pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate>
+      <title>My dataviz in 2020</title>
+      <link>https://dfrblog.netlify.app/posts/2021-09-21-my-data-visualizations-in-2020</link>
+      <description>Two charts, one map and one table on industrial park, COVID-19 and well-being</description>
+      <category>data-visualization</category>
+      <category>Datawrapper</category>
+      <category>ggplot2</category>
+      <category>gganimate</category>
+      <category>The-Jakarta-Post</category>
+      <guid>https://dfrblog.netlify.app/posts/2021-09-21-my-data-visualizations-in-2020</guid>
+      <pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

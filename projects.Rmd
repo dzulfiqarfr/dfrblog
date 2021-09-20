@@ -93,9 +93,11 @@ create_card <- function(title,
 }
 
 
+# Create the card in chronological order with the most recent project
+# placed on top
 tags$div(
 
-  # jakpoststyle
+  # jakpoststyle ----
   create_card(
     title = "jakpoststyle",
     date = "January 2021",
