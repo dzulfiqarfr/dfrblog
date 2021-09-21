@@ -1,7 +1,7 @@
 ---
 title: "My dataviz in 2020"
 description: |
-  Two charts, one map and one table on industrial park, COVID-19 and well-being
+  One scatter plot, one animated scatter plot, one map and one table on industrial park, COVID-19 and well-being
 date: "`r format(Sys.Date(), '%b. %d, %Y')`"
 categories:
   - data-visualization  
@@ -9,6 +9,7 @@ categories:
   - ggplot2  
   - gganimate  
   - The-Jakarta-Post
+preview: Figures/Preview_image.png
 output:
   distill::distill_article:
     self_contained: false
@@ -89,7 +90,11 @@ add_section(
 <iframe title="Pandemic development" aria-label="table" id="datawrapper-chart-yTEY3" src="https://datawrapper.dwcdn.net/yTEY3/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="391"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script>
 
-```{r Chart on GDP per capita and life expectancy}
+```{r Alt text for animated scatter plot on GDP per capita and life expectancy}
+alt_text <- "An animated scatter plot of GDP per capita in international dollars in 2005 prices and life expectancy between 1952 and 2007. The chart shows the population of each country as circle size. The chart highlights Indonesia and ASEAN-5, while also showing the rest of the world. The animated chart shows that the countries had achieved substantial progress in improving well-being"
+```
+
+```{r Chart on GDP per capita and life expectancy, fig.alt=alt_text}
 add_section(
   publication = "Twitter",
   url = "https://twitter.com/dzulfiqarfr/status/1303562408410062849?s=20",

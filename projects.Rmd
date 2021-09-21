@@ -45,8 +45,6 @@ knitr::opts_chunk$set(echo = FALSE)
   padding: 0px;
   text-align: left;
   background-color: white;
-  border-bottom-style: solid;
-  border-color: #999
 }
 
 .card-title {
@@ -54,12 +52,11 @@ knitr::opts_chunk$set(echo = FALSE)
 }
 
 .card-date {
-  color: #999;
-  font-weight: bold;
+  color: #9E9E9E;
 }
 
 .card-description {
-  color: #999;
+  color: #757575;
 }
 ```
 
@@ -96,6 +93,16 @@ create_card <- function(title,
 # Create the card in chronological order with the most recent project
 # placed on top
 tags$div(
+  
+  # My Dataviz in 2020 ----
+  
+  create_card(
+    title = "My dataviz in 2020",
+    date = "September 2021",
+    description = "One scatter plot, one animated scatter plot, one map and one table on industrial park, COVID-19 and well-being",
+    url = "posts/2021-09-21-my-data-visualizations-in-2020/index.html",
+    image_source = "posts/2021-09-21-my-data-visualizations-in-2020/Figures/Preview_image.png"
+  ),
 
   # jakpoststyle ----
   create_card(

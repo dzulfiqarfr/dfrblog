@@ -11,7 +11,7 @@
     <item>
       <title>My dataviz in 2020</title>
       <link>https://dfrblog.netlify.app/posts/2021-09-21-my-data-visualizations-in-2020</link>
-      <description>Two charts, one map and one table on industrial park, COVID-19 and well-being</description>
+      <description>One scatter plot, one animated scatter plot, one map and one table on industrial park, COVID-19 and well-being</description>
       <category>data-visualization</category>
       <category>Datawrapper</category>
       <category>ggplot2</category>
@@ -19,6 +19,7 @@
       <category>The-Jakarta-Post</category>
       <guid>https://dfrblog.netlify.app/posts/2021-09-21-my-data-visualizations-in-2020</guid>
       <pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://dfrblog.netlify.app/posts/2021-09-21-my-data-visualizations-in-2020/Figures/Preview_image.png" medium="image" type="image/png" width="1280" height="640"/>
     </item>
   </channel>
 </rss>
