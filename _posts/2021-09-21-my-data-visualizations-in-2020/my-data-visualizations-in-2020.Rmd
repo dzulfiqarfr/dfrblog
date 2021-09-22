@@ -2,7 +2,7 @@
 title: "My dataviz in 2020"
 description: |
   One scatter plot, one animated scatter plot, one map and one table on industrial park, COVID-19 and well-being
-date: "`r format(Sys.Date(), '%b. %d, %Y')`"
+date: "Sep. 21, 2021"
 categories:
   - data-visualization  
   - Datawrapper  
