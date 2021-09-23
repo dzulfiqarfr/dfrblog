@@ -2,11 +2,11 @@
 title: "Python, exchange rate and journalist boring task"
 description: |
   Journalists can use Python not only for data journalism, but also for automating mundane repetitive tasks such as converting currencies
-date: "Sep. 22, 2021"
+date: 2021-09-22
 categories:
   - Python
   - The-Jakarta-Post
-preview: Images/convert_usdidr_py.png
+preview: images/convert_usdidr_py.png
 output:
   distill::distill_article:
     self_contained: false
@@ -25,7 +25,7 @@ The Post’s style for US dollars is “US${figure}” and rupiah “Rp {figure}
 
 This forces me to go back and forth between my calculator, Google Docs and the website that publishes the exchange rate, such as Yahoo Finance, Reuters, Bloomberg or Bank Indonesia (BI). And then I will have to get the result in the correct format according to the Post’s style.
 
-So I built a simple program in Python to make life slightly easier. 
+So I wrote a simple Python script to make life slightly easier. 
 
 I use the **yfinance** library to get the latest exchange rate data from [Yahoo Finance](https://finance.yahoo.com/quote/usdidr=X?ltr=1){target=“_blank”}. We just need to download the data with the `download()` function and pass the “USDIDR=X” as the ticker. Then we set the period to just one day by passing “1d” to the `period` parameter to keep things simple and allow faster load time.
 
@@ -62,7 +62,7 @@ print("Please write the base figure:")
 currency_input = float(input("> "))
 ```
 
-Now, we can start converting the base figure, rounding it and writing it in a format that is easier to read. We will also store the symbol of the currency output that we will use later.
+Now, we can start converting the base figure, rounding it and writing it in a format that is easier to read. We will store the symbol of the currency output that we will use later. We also need to turn the long figures into units like million, billion, etc.
 
 ```{python}
 # The currency symbol takes the opposite currency of the currency input
@@ -100,12 +100,12 @@ pyperclip.copy(result)
 print("The result has been copied to clipboard!")
 ```
 
-The result is a very simple yet helpful program. It allows users to convert rupiah figures to US dollars or the other way around all in the command line.
+The product is a very simple yet helpful program. It allows users to convert rupiah figures to US dollars or the other way around all in the command line.
 
 ```{r eval=TRUE, echo=FALSE}
-knitr::include_graphics("Images/convert_usdidr.gif")
+knitr::include_graphics("images/convert_usdidr.gif")
 ```
 
 Python (or R) is common for doing data journalism, which involves working with a large amount of data. I myself use R as my go-to tool for working on [data stories](https://github.com/dzulfiqarfr/jakpost-chart-data){target="_blank"}.
 
-But programming languages can also give us journalists a small win, such as improving the workflow for converting currencies.
+But programming can also give us journalists a small win, such as improving the workflow for converting currencies.

@@ -2,6 +2,8 @@
 title: "Projects"
 description: |
   I really enjoy working on (side) projects related to data analysis and visualizations, especially on social and economic issues. I also love trying to make life slightly easier by building tools, such as R packages. Here are my projects
+repository_url: null
+creative_commons: null
 output: distill::distill_article
 ---
 
@@ -94,14 +96,22 @@ create_card <- function(title,
 # placed on top
 tags$div(
   
-  # My Dataviz in 2020 ----
+  # Data journalism at The Jakarta Post
+  create_card(
+    title = "Data journalism at The Jakarta Post",
+    date = "Ongoing",
+    description = "A GitHub repo containing code and data behind my stories on social and economic issues at The Jakarta Post",
+    url = "https://github.com/dzulfiqarfr/jakpost-chart-data",
+    image_source = "images/jakpost-chart-data_preview.png"
+  ),
   
+  # My Dataviz in 2020 ----
   create_card(
     title = "My dataviz in 2020",
     date = "September 2021",
     description = "One scatter plot, one animated scatter plot, one map and one table on industrial park, COVID-19 and well-being",
     url = "posts/2021-09-21-my-data-visualizations-in-2020/index.html",
-    image_source = "posts/2021-09-21-my-data-visualizations-in-2020/Figures/Preview_image.png"
+    image_source = "posts/2021-09-21-my-data-visualizations-in-2020/figures/my-dataviz-in-2020_preview.png"
   ),
 
   # jakpoststyle ----
@@ -110,7 +120,7 @@ tags$div(
     date = "January 2021",
     description = "An R package to edit Datawrapper chart properties with an unofficial custom theme of The Jakarta Post",
     url = "https://dzulfiqarfr.github.io/jakpoststyle/",
-    image_source = "images/jakpoststyle_social_media_card.png"
+    image_source = "images/jakpoststyle_preview.png"
   ),
   
   # Indonesia EconRecovery ----
@@ -119,7 +129,7 @@ tags$div(
     date = "November 2020",
     description = "Charts and tables to track Indonesia’s economic recovery from the COVID-19 pandemic",
     url = "https://dzulfiqarfr.github.io/indonesia-recovery-tracker/",
-    image_source = "images/ier_screenshot.png"
+    image_source = "images/ier_preview.png"
   )
   
 )

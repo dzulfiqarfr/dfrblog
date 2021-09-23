@@ -89,7 +89,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <title>Dzulfiqar Fathur Rahman: Posts</title>
 
 
-  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -107,7 +106,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","listing"]}},"value":[{"type":"character","attributes":{},"value":["Posts"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","repository_url","creative_commons","listing"]}},"value":[{"type":"character","attributes":{},"value":["Posts"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["posts"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2042,6 +2041,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+  <script type="text/javascript" cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-432HBENZHF"></script>
+  <script type="text/javascript" cookie-consent="tracking">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-432HBENZHF');
+  </script>
   <!--/radix_placeholder_site_in_header-->
 
 
@@ -2066,9 +2072,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="nav-right">
 <a href="blog.html">Blog</a>
 <a href="projects.html">Projects</a>
-<a href="blog.xml">
-<i class="fa fa-rss" aria-hidden="true"></i>
-</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2214,10 +2217,10 @@ function init_posts_list() {
 <a href="posts/2021-09-22-python-exchange-rate-and-journalist-boring-task/" class="post-preview">
 <script class="post-metadata" type="text/json">{"categories":["Python","The-Jakarta-Post"]}</script>
 <div class="metadata">
-<div class="publishedDate">Sept. 21, 2021</div>
+<div class="publishedDate">Sept. 22, 2021</div>
 </div>
 <div class="thumbnail">
-<img src="posts/2021-09-22-python-exchange-rate-and-journalist-boring-task/Images/convert_usdidr_py.png"/>
+<img src="posts/2021-09-22-python-exchange-rate-and-journalist-boring-task/images/convert_usdidr_py.png"/>
 </div>
 <div class="description">
 <h2>Python, exchange rate and journalist boring task</h2>
@@ -2234,7 +2237,7 @@ function init_posts_list() {
 <div class="publishedDate">Sept. 21, 2021</div>
 </div>
 <div class="thumbnail">
-<img src="posts/2021-09-21-my-data-visualizations-in-2020/Figures/Preview_image.png"/>
+<img src="posts/2021-09-21-my-data-visualizations-in-2020/Figures/my-dataviz-in-2020_preview.png"/>
 </div>
 <div class="description">
 <h2>My dataviz in 2020</h2>
@@ -2250,6 +2253,17 @@ function init_posts_list() {
 </a>
 </div>
 <div class="posts-sidebar">
+<div class="sidebar-section subscribe">
+<h3>Subscribe</h3>
+<form method='post' action='https://blogtrottr.com'>
+  <p>Get notified of new posts via email:</p>
+  <input type='text' name='btr_email' />
+  <input type='hidden' name='btr_url'
+         value='https://dfrblog.netlify.app/blog.xml'/>
+  <input type='hidden' name='schedule_type' value='0' />
+  <input type='submit' value='Subscribe' />
+</form>
+</div>
 <div class="sidebar-section categories">
 <h3>Categories</h3>
 <ul>
@@ -2288,7 +2302,7 @@ function init_posts_list() {
 <a href="#">More articles &raquo;</a>
 </div>
 </div>
-<!--/radix_placeholder_article_listing-->
+<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
 <h1>Posts</h1>
@@ -2311,12 +2325,7 @@ function init_posts_list() {
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom">
-<h3 id="updates-and-corrections">Corrections</h3>
-<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/dzulfiqarfr/dfrblog/issues/new">create an issue</a> on the source repository.</p>
-<h3 id="reuse">Reuse</h3>
-<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source code is available at <a href="https://github.com/dzulfiqarfr/dfrblog">https://github.com/dzulfiqarfr/dfrblog</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
-</div>
+<div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

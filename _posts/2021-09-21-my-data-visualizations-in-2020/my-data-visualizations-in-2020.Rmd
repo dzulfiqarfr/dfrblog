@@ -2,14 +2,14 @@
 title: "My dataviz in 2020"
 description: |
   One scatter plot, one animated scatter plot, one map and one table on industrial park, COVID-19 and well-being
-date: "Sep. 21, 2021"
+date: 2021-09-21
 categories:
   - data-visualization  
   - Datawrapper  
   - ggplot2  
   - gganimate  
   - The-Jakarta-Post
-preview: Figures/Preview_image.png
+preview: Figures/my-dataviz-in-2020_preview.png
 output:
   distill::distill_article:
     self_contained: false
@@ -101,7 +101,7 @@ add_section(
   date = "Sep. 9, 2020"
 )
 
-knitr::include_graphics("Figures/gapminder_animated.gif")
+knitr::include_graphics("figures/gapminder_animated.gif")
 ```
 
 ```{r Code for animated scatter plot, eval=FALSE, echo = TRUE, code_folding=TRUE}

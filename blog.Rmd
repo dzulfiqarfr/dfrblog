@@ -1,4 +1,6 @@
 ---
 title: "Posts"
+repository_url: null
+creative_commons: null
 listing: posts
 ---

@@ -89,7 +89,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <meta property="description" itemprop="description" content="I really enjoy working on (side) projects related to data analysis and visualizations, especially on social and economic issues. I also love trying to make life slightly easier by building tools, such as R packages. Here are my projects"/>
 
-  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -109,7 +108,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Projects"]},{"type":"character","attributes":{},"value":["I really enjoy working on (side) projects related to data analysis and visualizations, especially on social and economic issues. I also love trying to make life slightly easier by building tools, such as R packages. Here are my projects\n"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","repository_url","creative_commons","output"]}},"value":[{"type":"character","attributes":{},"value":["Projects"]},{"type":"character","attributes":{},"value":["I really enjoy working on (side) projects related to data analysis and visualizations, especially on social and economic issues. I also love trying to make life slightly easier by building tools, such as R packages. Here are my projects\n"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2044,6 +2043,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+  <script type="text/javascript" cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-432HBENZHF"></script>
+  <script type="text/javascript" cookie-consent="tracking">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-432HBENZHF');
+  </script>
   <!--/radix_placeholder_site_in_header-->
 
 
@@ -2068,9 +2074,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="nav-right">
 <a href="blog.html">Blog</a>
 <a href="projects.html">Projects</a>
-<a href="blog.xml">
-<i class="fa fa-rss" aria-hidden="true"></i>
-</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2144,8 +2147,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div>
 <div class="column">
 <div class="card">
+<a href="https://github.com/dzulfiqarfr/jakpost-chart-data" target="_blank">
+<img src="images/jakpost-chart-data_preview.png" style="width:100%"/>
+<div class="card-title">Data journalism at The Jakarta Post</div>
+<div class="card-date">Ongoing</div>
+<div class="card-description">A GitHub repo containing code and data behind my stories on social and economic issues at The Jakarta Post</div>
+</a>
+</div>
+</div>
+<div class="column">
+<div class="card">
 <a href="posts/2021-09-21-my-data-visualizations-in-2020/index.html" target="_blank">
-<img src="posts/2021-09-21-my-data-visualizations-in-2020/Figures/Preview_image.png" style="width:100%"/>
+<img src="posts/2021-09-21-my-data-visualizations-in-2020/figures/my-dataviz-in-2020_preview.png" style="width:100%"/>
 <div class="card-title">My dataviz in 2020</div>
 <div class="card-date">September 2021</div>
 <div class="card-description">One scatter plot, one animated scatter plot, one map and one table on industrial park, COVID-19 and well-being</div>
@@ -2155,7 +2168,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="column">
 <div class="card">
 <a href="https://dzulfiqarfr.github.io/jakpoststyle/" target="_blank">
-<img src="images/jakpoststyle_social_media_card.png" style="width:100%"/>
+<img src="images/jakpoststyle_preview.png" style="width:100%"/>
 <div class="card-title">jakpoststyle</div>
 <div class="card-date">January 2021</div>
 <div class="card-description">An R package to edit Datawrapper chart properties with an unofficial custom theme of The Jakarta Post</div>
@@ -2165,7 +2178,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="column">
 <div class="card">
 <a href="https://dzulfiqarfr.github.io/indonesia-recovery-tracker/" target="_blank">
-<img src="images/ier_screenshot.png" style="width:100%"/>
+<img src="images/ier_preview.png" style="width:100%"/>
 <div class="card-title">Indonesia EconRecovery</div>
 <div class="card-date">November 2020</div>
 <div class="card-description">Charts and tables to track Indonesia’s economic recovery from the COVID-19 pandemic</div>
@@ -2186,12 +2199,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom">
-<h3 id="updates-and-corrections">Corrections</h3>
-<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/dzulfiqarfr/dfrblog/issues/new">create an issue</a> on the source repository.</p>
-<h3 id="reuse">Reuse</h3>
-<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source code is available at <a href="https://github.com/dzulfiqarfr/dfrblog">https://github.com/dzulfiqarfr/dfrblog</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
-</div>
+<div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

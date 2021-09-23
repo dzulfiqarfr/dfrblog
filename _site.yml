@@ -1,14 +1,17 @@
-name: "dfrblog"
+name: "Dzulfiqar Fathur Rahman's personal website"
 title: "Dzulfiqar Fathur Rahman"
 description: |
-  Dzulfiqar Fathur Rahman's blog about all things data analysis and visualizations
+  Dzulfiqar Fathur Rahman's personal website and blog about data analysis 
+  and visualizations
 base_url: https://dfrblog.netlify.app/
 repository_url: https://github.com/dzulfiqarfr/dfrblog
+google_analytics: "G-432HBENZHF"
 collections:
   posts:
     share: [twitter, facebook, linkedin]
     citations: false
     authors_metadata: false
+    subscribe: _subscribe.html
 output_dir: "_site"
 navbar:
   right:
@@ -16,8 +19,6 @@ navbar:
       href: blog.html
     - text: "Projects"
       href: projects.html
-    - icon: fa fa-rss
-      href: blog.xml
 twitter:
   creator: "@dzulfiqarfr"
 creative_commons: CC BY
