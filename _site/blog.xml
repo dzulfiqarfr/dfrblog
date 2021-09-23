@@ -2,8 +2,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
     <title>Dzulfiqar Fathur Rahman</title>
-    <link>https://dfrblog.netlify.app/</link>
-    <atom:link href="https://dfrblog.netlify.app/blog.xml" rel="self" type="application/rss+xml"/>
+    <link>https://dzulfiqarfr.com/</link>
+    <atom:link href="https://dzulfiqarfr.com/blog.xml" rel="self" type="application/rss+xml"/>
     <description>Dzulfiqar Fathur Rahman's personal website and blog about data analysis 
 and visualizations
 </description>
@@ -11,26 +11,26 @@ and visualizations
     <lastBuildDate>Wed, 22 Sep 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Python, exchange rate and journalist boring task</title>
-      <link>https://dfrblog.netlify.app/posts/2021-09-22-python-exchange-rate-and-journalist-boring-task</link>
+      <link>https://dzulfiqarfr.com/posts/2021-09-22-python-exchange-rate-and-journalist-boring-task</link>
       <description>Journalists can use Python not only for data journalism, but also for automating mundane repetitive tasks such as converting currencies</description>
       <category>Python</category>
       <category>The-Jakarta-Post</category>
-      <guid>https://dfrblog.netlify.app/posts/2021-09-22-python-exchange-rate-and-journalist-boring-task</guid>
+      <guid>https://dzulfiqarfr.com/posts/2021-09-22-python-exchange-rate-and-journalist-boring-task</guid>
       <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://dfrblog.netlify.app/posts/2021-09-22-python-exchange-rate-and-journalist-boring-task/images/convert_usdidr_py.png" medium="image" type="image/png" width="1280" height="640"/>
+      <media:content url="https://dzulfiqarfr.com/posts/2021-09-22-python-exchange-rate-and-journalist-boring-task/images/convert_usdidr_py.png" medium="image" type="image/png" width="1280" height="640"/>
     </item>
     <item>
       <title>My dataviz in 2020</title>
-      <link>https://dfrblog.netlify.app/posts/2021-09-21-my-data-visualizations-in-2020</link>
+      <link>https://dzulfiqarfr.com/posts/2021-09-21-my-data-visualizations-in-2020</link>
       <description>One scatter plot, one animated scatter plot, one map and one table on industrial park, COVID-19 and well-being</description>
       <category>data-visualization</category>
       <category>Datawrapper</category>
       <category>ggplot2</category>
       <category>gganimate</category>
       <category>The-Jakarta-Post</category>
-      <guid>https://dfrblog.netlify.app/posts/2021-09-21-my-data-visualizations-in-2020</guid>
+      <guid>https://dzulfiqarfr.com/posts/2021-09-21-my-data-visualizations-in-2020</guid>
       <pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://dfrblog.netlify.app/posts/2021-09-21-my-data-visualizations-in-2020/Figures/my-dataviz-in-2020_preview.png" medium="image" type="image/png" width="1280" height="640"/>
+      <media:content url="https://dzulfiqarfr.com/posts/2021-09-21-my-data-visualizations-in-2020/Figures/my-dataviz-in-2020_preview.png" medium="image" type="image/png" width="1280" height="640"/>
     </item>
   </channel>
 </rss>

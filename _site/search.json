@@ -6,21 +6,21 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-09-23T18:55:56+07:00"
+      "last_modified": "2021-09-23T22:08:37+07:00"
     },
     {
       "path": "blog.html",
       "title": "Posts",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-09-23T18:55:58+07:00"
+      "last_modified": "2021-09-23T22:08:47+07:00"
     },
     {
       "path": "index.html",
       "title": "Dzulfiqar Fathur Rahman",
       "author": [],
       "contents": "\r\n\r\n          \r\n          \r\n          Dzulfiqar Fathur Rahman\r\n          \r\n          \r\n          Blog\r\n          Projects\r\n          ☰\r\n          \r\n          \r\n      \r\n        \r\n          \r\n            Dzulfiqar Fathur Rahman\r\n          \r\n          \r\n            \r\n              Hi! I am a journalist covering the economy for The Jakarta Post. I love analyzing data to tell stories and talking to people to better understand the data that represent them. I also build tools to improve my workflow for writing stories and creating data visualizations\r\n            \r\n            \r\n              Hi! I am a journalist covering the economy for The Jakarta Post. I love analyzing data to tell stories and talking to people to better understand the data that represent them. I also build tools to improve my workflow for writing stories and creating data visualizations\r\n            \r\n          \r\n\r\n          \r\n            \r\n              \r\n                  \r\n                    \r\n                      LinkedIn\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      Twitter\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      GitHub\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      Email\r\n                    \r\n                  \r\n                \r\n                              \r\n          \r\n\r\n          \r\n            \r\n              \r\n                                \r\n                  \r\n                    LinkedIn\r\n                  \r\n                \r\n                                \r\n                  \r\n                    Twitter\r\n                  \r\n                \r\n                                \r\n                  \r\n                    GitHub\r\n                  \r\n                \r\n                                \r\n                  \r\n                    Email\r\n                  \r\n                \r\n                              \r\n            \r\n          \r\n        \r\n      \r\n    \r\n\r\n    \r\n    \r\n    ",
-      "last_modified": "2021-09-23T18:55:59+07:00"
+      "last_modified": "2021-09-23T22:08:48+07:00"
     },
     {
       "path": "projects.html",
@@ -28,7 +28,7 @@
       "description": "I really enjoy working on (side) projects related to data analysis and visualizations, especially on social and economic issues. I also love trying to make life slightly easier by building tools, such as R packages. Here are my projects\n",
       "author": [],
       "contents": "\r\n\r\n\r\n* {\r\n  box-sizing: border-box;\r\n}\r\n\r\n/* Float four columns side by side */\r\n.column {\r\n  float: left;\r\n  width: 50%;\r\n  padding: 15px 15px;\r\n}\r\n\r\n/* Remove extra left and right margins, due to padding */\r\n.row {margin: 0 -5px;}\r\n\r\n/* Clear floats after the columns */\r\n.row:after {\r\n  content: \"\";\r\n  display: table;\r\n  clear: both;\r\n}\r\n\r\n/* Responsive columns */\r\n@media screen and (max-width: 600px) {\r\n  .column {\r\n    width: 100%;\r\n    display: block;\r\n    margin-bottom: 20px;\r\n  }\r\n}\r\n\r\n/* Style the counter cards */\r\n.card {\r\n  padding: 0px;\r\n  text-align: left;\r\n  background-color: white;\r\n}\r\n\r\n.card-title {\r\n  font-weight: bold; \r\n}\r\n\r\n.card-date {\r\n  color: #9E9E9E;\r\n}\r\n\r\n.card-description {\r\n  color: #757575;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\nData journalism at The Jakarta Post\r\nOngoing\r\nA GitHub repo containing code and data behind my stories on social and economic issues at The Jakarta Post\r\n\r\n\r\n\r\n\r\n\r\n\r\nMy dataviz in 2020\r\nSeptember 2021\r\nOne scatter plot, one animated scatter plot, one map and one table on industrial park, COVID-19 and well-being\r\n\r\n\r\n\r\n\r\n\r\n\r\njakpoststyle\r\nJanuary 2021\r\nAn R package to edit Datawrapper chart properties with an unofficial custom theme of The Jakarta Post\r\n\r\n\r\n\r\n\r\n\r\n\r\nIndonesia EconRecovery\r\nNovember 2020\r\nCharts and tables to track Indonesia’s economic recovery from the COVID-19 pandemic\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-09-23T18:56:01+07:00"
+      "last_modified": "2021-09-23T22:08:50+07:00"
     }
   ],
   "collections": ["posts/posts.json"]

@@ -3,9 +3,9 @@ title: "Dzulfiqar Fathur Rahman"
 description: |
   Dzulfiqar Fathur Rahman's personal website and blog about data analysis 
   and visualizations
-base_url: https://dfrblog.netlify.app/
+base_url: https://dzulfiqarfr.com/
 repository_url: https://github.com/dzulfiqarfr/dfrblog
-google_analytics: "G-432HBENZHF"
+google_analytics: "G-3ZTN8BVWSZ"
 collections:
   posts:
     share: [twitter, facebook, linkedin]

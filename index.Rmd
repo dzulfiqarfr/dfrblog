@@ -9,7 +9,7 @@ links:
   - label: GitHub
     url: "https://github.com/dzulfiqarfr"
   - label: Email
-    url: "mailto:frdzulfiqar@gmail.com"
+    url: "mailto:contact@dzulfiqarfr.com"
 site: distill::distill_website
 output:
   postcards::jolla
