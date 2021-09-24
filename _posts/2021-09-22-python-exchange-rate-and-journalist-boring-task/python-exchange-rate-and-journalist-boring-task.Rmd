@@ -9,6 +9,8 @@ categories:
 preview: images/convert_usdidr_py.png
 output:
   distill::distill_article:
+    highlight: pygments
+    highlight_downlit: false
     self_contained: false
 ---
 
@@ -38,6 +40,7 @@ import pyperclip
 print("Getting the latest exchange rate from Yahoo Finance...")
 
 usd_idr_raw = download(tickers = "USDIDR=X", period = "1d", progress = False)
+
 exchange_rate = usd_idr_raw.Close[0]
 
 print(f"Latest USD-IDR exchange rate: Rp{exchange_rate:,}")
@@ -62,41 +65,54 @@ print("Please write the base figure:")
 currency_input = float(input("> "))
 ```
 
-Now, we can start converting the base figure, rounding it and writing it in a format that is easier to read. We will store the symbol of the currency output that we will use later. We also need to turn the long figures into units like million, billion, etc.
+Now, we can start converting the base figure, rounding it and writing it in a format that is easier to read. We will store the symbol of the currency output that we will use later. We also need to convert the long figures into units like million, billion, etc.
 
 ```{python}
-# The currency symbol takes the opposite currency of the currency input
+# The currency symbol is the opposite of the currency input
 if base_currency == "IDR":
-    result = currency_input / exchange_rate
+    result_raw = currency_input / exchange_rate
     currency_symbol = "US$"
 else:
-    result = currency_input * exchange_rate
+    result_raw = currency_input * exchange_rate
     currency_symbol = "Rp "
 
-if result > 1000000 and result < 1000000000:
-    result = round(result / 1000000, 2)
+result_whole = round(result_raw)
+
+len_result = len(str(result_whole))
+
+if result_whole > 1000000:
+    denominator = int("1" + "0" * (len_result - 1))
+    result_converted = round(result_raw / denominator, 2)
+
+if len_result < 7:
+    unit = ""
+elif len_result >= 7:
     unit = "million"
-elif result > 1000000000 and result < 1000000000000:
-    result = round(result / 1000000000, 2)
+elif len_result >= 10:
     unit = "billion"
-elif result > 1000000000000 and result < 1000000000000:
-    result = round(result / 1000000000000, 2)
+elif len_result >= 13:
     unit = "trillion"
-elif result > 1000000000000000:
-    result = round(result / 1000000000000000, 2)
+elif len_result >= 16:
     unit = "quadrillion"
 else:
-    result = round(result, 2)
-    unit = ""
+    print("Please provide the unit:")
+    unit = input("> ")
+
+if result_whole > 1000000:
+    result_print = result_converted
+else:
+    result_print = round(result_raw, 2)
 ```
 
 Finally, we can combine the result, currency symbol and unit in line with the Post’s style for the final result and printing to the console. To facilitate users further, we can copy the result to clipboard using the **pyperclip** library.
 
 ```{python}
-result = f"{currency_symbol}{result:,} {unit}"
-print(f"Result: {result}")
+result_formatted = f"{currency_symbol}{result_print:,} {unit}"
 
-pyperclip.copy(result)
+print(f"Result: {result_formatted}")
+
+pyperclip.copy(result_formatted)
+
 print("The result has been copied to clipboard!")
 ```
 
@@ -109,3 +125,5 @@ knitr::include_graphics("images/convert_usdidr.gif")
 Python (or R) is common for doing data journalism, which involves working with a large amount of data. I myself use R as my go-to tool for working on [data stories](https://github.com/dzulfiqarfr/jakpost-chart-data){target="_blank"}.
 
 But programming can also give us journalists a small win, such as improving the workflow for converting currencies.
+
+<p style="color:#999">*Last updated: `r format(Sys.Date(), "%b. %d, %Y")`*</p>
