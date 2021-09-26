@@ -114,13 +114,13 @@ tags$div(
     image_source = "posts/2021-09-21-my-data-visualizations-in-2020/figures/my-dataviz-in-2020_preview.png"
   ),
 
-  # jakpoststyle ----
+  # jpwrapper ----
   create_card(
-    title = "jakpoststyle",
+    title = "jpwrapper",
     date = "January 2021",
-    description = "An R package to edit Datawrapper chart properties with an unofficial custom theme of The Jakarta Post",
-    url = "https://dzulfiqarfr.github.io/jakpoststyle/",
-    image_source = "images/jakpoststyle_preview.png"
+    description = "An R package customize Datawrapper charts with design principles I used at The Jakarta Post",
+    url = "https://dzulfiqarfr.github.io/jpwrapper/",
+    image_source = "images/jpwrapper_preview.png"
   ),
   
   # Indonesia EconRecovery ----
