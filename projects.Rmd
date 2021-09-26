@@ -118,7 +118,7 @@ tags$div(
   create_card(
     title = "jpwrapper",
     date = "January 2021",
-    description = "An R package customize Datawrapper charts with design principles I used at The Jakarta Post",
+    description = "An R package to customize Datawrapper charts with design principles I used at The Jakarta Post",
     url = "https://dzulfiqarfr.github.io/jpwrapper/",
     image_source = "images/jpwrapper_preview.png"
   ),
