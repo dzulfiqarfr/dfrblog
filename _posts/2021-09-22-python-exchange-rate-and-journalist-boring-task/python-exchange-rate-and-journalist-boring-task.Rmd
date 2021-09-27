@@ -33,7 +33,6 @@ I use the **yfinance** library to get the latest exchange rate data from [Yahoo 
 
 ```{python}
 from sys import exit
-from os.path import exists
 from yfinance import download
 import pyperclip
 
