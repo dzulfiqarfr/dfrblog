@@ -8,17 +8,7 @@
 and visualizations
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 22 Sep 2021 00:00:00 +0000</lastBuildDate>
-    <item>
-      <title>Python, exchange rate and journalist boring task</title>
-      <link>https://dzulfiqarfr.com/posts/2021-09-22-python-exchange-rate-and-journalist-boring-task</link>
-      <description>Journalists can use Python not only for data journalism, but also for automating mundane repetitive tasks such as converting currencies</description>
-      <category>Python</category>
-      <category>The-Jakarta-Post</category>
-      <guid>https://dzulfiqarfr.com/posts/2021-09-22-python-exchange-rate-and-journalist-boring-task</guid>
-      <pubDate>Wed, 22 Sep 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://dzulfiqarfr.com/posts/2021-09-22-python-exchange-rate-and-journalist-boring-task/images/convert_usdidr_py.png" medium="image" type="image/png" width="1280" height="640"/>
-    </item>
+    <lastBuildDate>Tue, 21 Sep 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>My dataviz in 2020</title>
       <link>https://dzulfiqarfr.com/posts/2021-09-21-my-data-visualizations-in-2020</link>
