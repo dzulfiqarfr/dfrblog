@@ -1,0 +1,3 @@
+title,description,date,image_url,project_url
+Data journalism at The Jakarta Post,"Code, data and documentation behind the analysis and graphics in my stories on The Jakarta Post.",2021–2022,images/jakpost-graphics.png,https://github.com/dzulfiqarfr/jakpost-graphics
+jpwrapper,An R package to customize Datawrapper charts with design principles I use at The Jakarta Post.,January 2021,images/jpwrapper.png,https://github.com/dzulfiqarfr/jpwrapper

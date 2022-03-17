@@ -1,8 +1,7 @@
 name: "Dzulfiqar Fathur Rahman's personal website"
 title: "Dzulfiqar Fathur Rahman"
 description: |
-  Dzulfiqar Fathur Rahman's personal website and blog about data analysis 
-  and visualizations
+  My bio, blog and list of projects
 base_url: https://dzulfiqarfr.com/
 repository_url: https://github.com/dzulfiqarfr/dfrblog
 google_analytics: "G-3ZTN8BVWSZ"

@@ -1,6 +1,6 @@
 ---
 title: "Dzulfiqar Fathur Rahman"
-image: "images/profile_photo.jpeg"
+image: "images/profile-photo.jpeg"
 links:
   - label: LinkedIn
     url: "https://linkedin.com/in/dzulfiqarfr/"
@@ -15,6 +15,4 @@ output:
   postcards::jolla
 ---
  
-Hi! I am a journalist covering the economy for The Jakarta Post. I love analyzing data to tell stories and talking to people to better understand the data that represent them. I also build tools to improve my workflow for writing stories and creating data visualizations
-
-
+I am a journalist based in Bekasi, West Java, Indonesia. I wrangle and analyze data to tell stories that affect both people and businesses. I also build tools with R to improve my work

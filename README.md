@@ -1,5 +1,5 @@
 # dfrblog
 
-This is a repo for my personal website that I built using the [**distill**](https://rstudio.github.io/distill/) package in R. Although the repo’s name is dfrblog, the website integrates my personal information page (which uses the [**postcards**](https://github.com/seankross/postcards) package), blog and portfolio.
+Code and data behind my website. Built using R with the [distill](https://rstudio.github.io/distill/), [postcards](https://github.com/seankross/postcards) and [bs4cards](https://bs4cards.djnavarro.net/index.html) packages.
 
-Previously, I blogged on [Medium](https://dzulfiqarfr.medium.com/).
+I publish the code under the [MIT license](LICENSE). The contents are published under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.

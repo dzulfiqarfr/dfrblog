@@ -9,14 +9,15 @@ categories:
   - ggplot2  
   - gganimate  
   - The-Jakarta-Post
-preview: Figures/my-dataviz-in-2020_preview.png
+preview: "images/my-dataviz-in-2020.png"
 output:
   distill::distill_article:
     self_contained: false
 ---
 
-```{r Setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(echo = FALSE)
 ```
 
 I created dozens of data visualizations on various topics in 2020 both for work and personal projects. From COVID-19 to industrial park. 
@@ -25,15 +26,17 @@ I published my first [“data-driven story” on poverty in Jakarta](https://www
 
 Here’s my favorite data visualizations from last year, with a few improvements.
 
-```{r Styles}
+```{r}
+# Packages
 library(htmltools)
 library(stringr)
 
+# Define a function to write section
 add_section <- function(publication, url, date) {
   
-  publication_lower <- str_to_lower(publication)
+  publicationLowered <- str_to_lower(publication)
   
-  color <- if (publication_lower == "twitter") {
+  color <- if (publicationLowered == "twitter") {
     "#1DA1F2"
   } else {
     # The Jakarta Post
@@ -57,7 +60,7 @@ add_section <- function(publication, url, date) {
 }
 ```
 
-```{r Charts on COVID deahts}
+```{r COVID deaths}
 add_section(
   publication = "Twitter",
   url = "https://twitter.com/dzulfiqarfr/status/1274197957349273600?s=20",
@@ -68,7 +71,7 @@ add_section(
 <iframe title="Deaths tend to be higher in densely-populated regions" aria-label="chart" id="datawrapper-chart-2poIL" src="https://datawrapper.dwcdn.net/2poIL/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="371"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script>
 
-```{r Map of Batang industrial estate}
+```{r Batang industrial estate}
 add_section(
   publication = "The Jakarta Post",
   url = "https://www.thejakartapost.com/news/2020/07/14/what-you-need-to-know-about-batang-industrial-zone-development.html",
@@ -79,7 +82,7 @@ add_section(
 <iframe title="To be made in Batang and Brebes" aria-label="chart" id="datawrapper-chart-q0iOk" src="https://datawrapper.dwcdn.net/q0iOk/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="573"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();
 </script>
 
-```{r Table on COVID cases}
+```{r COVID cases}
 add_section(
   publication = "Twitter",
   url = "https://twitter.com/dzulfiqarfr/status/1284729684643676160?s=20",
@@ -90,58 +93,70 @@ add_section(
 <iframe title="Pandemic development" aria-label="table" id="datawrapper-chart-yTEY3" src="https://datawrapper.dwcdn.net/yTEY3/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="391"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script>
 
-```{r Alt text for animated scatter plot on GDP per capita and life expectancy}
-alt_text <- "An animated scatter plot of GDP per capita in international dollars in 2005 prices and life expectancy between 1952 and 2007. The chart shows the population of each country as circle size. The chart highlights Indonesia and ASEAN-5, while also showing the rest of the world. The animated chart shows that the countries had achieved substantial progress in improving well-being"
+```{r Alt text for animated chart}
+altAnimation <- paste0(
+  "An animated scatter plot of GDP per capita in international dollars ",
+  "in 2005 prices and life expectancy between 1952 and 2007. ",
+  "The chart shows the population of each country as circle size. ",
+  "The chart highlights Indonesia and ASEAN-5, while also showing ",
+  "the rest of the world. The animated chart shows that the countries ",
+  "had achieved substantial progress in improving well-being"
+)
 ```
 
-```{r Chart on GDP per capita and life expectancy, fig.alt=alt_text}
+```{r Life expectancy and income per capita animation, fig.alt=altAnimation}
 add_section(
   publication = "Twitter",
   url = "https://twitter.com/dzulfiqarfr/status/1303562408410062849?s=20",
   date = "Sep. 9, 2020"
 )
 
-knitr::include_graphics("figures/gapminder_animated.gif")
+include_graphics("images/life-expectancy-income-per-cap.gif")
 ```
 
-```{r Code for animated scatter plot, eval=FALSE, echo = TRUE, code_folding=TRUE}
-# Packages ----------------------------------------------------------------
+```{r Code behind animated chart, eval=FALSE, echo=TRUE, code_folding=TRUE}
+# Packages ----
 
 library(tidyverse)
 library(gapminder)
 library(gganimate)
 
-# Data --------------------------------------------------------------------
 
-asean_5 <- c("Singapore", "Philippines", "Thailand", "Malaysia")
+# Data ----
 
-gapminder_grouped <- gapminder %>% 
+asean5 <- c("Singapore", "Philippines", "Thailand", "Malaysia")
+
+gapminderGrouped <- gapminder %>% 
   mutate(
     pop = pop / 1000000,
     group = case_when(
       country == "Indonesia" ~ "Indonesia",
-      country %in% asean_5 ~ "ASEAN-5",
+      country %in% asean5 ~ "ASEAN-5",
       TRUE ~ "Rest of the world"
     )
   )
 
-# Chart -------------------------------------------------------------------
 
-x_axis_break <- c(100, 1000, 10000, 100000, 1000000)
+# Chart ----
 
-color_primary <- "#757575"
-color_primary_light <- "#E0E0E0"
+colorPrimary <- "#757575"
+colorPrimaryLight <- "#E0E0E0"
 
-gapminder_chart <- ggplot(gapminder_grouped, aes(gdpPercap, lifeExp)) +
+axisBreakX <- c(100, 1000, 10000, 100000, 1000000)
+
+plotGapminder <- ggplot(
+  data = gapminderGrouped, 
+  mapping = aes(x = gdpPercap, y = lifeExp)
+) +
   geom_point(
-    aes(fill = group, size = pop),
+    mapping = aes(fill = group, size = pop),
     pch = 21, 
     color = "white", 
     alpha = 0.85
   ) +
   scale_x_log10(
-    breaks = x_axis_break,
-    labels = format(x_axis_break, scientific = FALSE, big.mark = ","),
+    breaks = axisBreakX,
+    labels = format(axisBreakX, scientific = FALSE, big.mark = ","),
     limits = c(100, 1000000)
   ) +
   scale_y_continuous(
@@ -173,7 +188,7 @@ gapminder_chart <- ggplot(gapminder_grouped, aes(gdpPercap, lifeExp)) +
     size = guide_bins(
       title.position = "top",
       title.hjust = 1,
-      label.theme = element_text(size = 6.6, color = color_primary),
+      label.theme = element_text(size = 6.6, color = colorPrimary),
       direction = "horizontal",
       override.aes = list(fill = "#BDBDBD")
     )
@@ -181,23 +196,23 @@ gapminder_chart <- ggplot(gapminder_grouped, aes(gdpPercap, lifeExp)) +
   labs(
     title = "Getting better, but not enough",
     subtitle = paste0(
-      "Life expectancy (in years) and GDP per capita (in international dollars in 2005 prices)",
-      "\nYear: {frame_time}"    
+      "Life expectancy (in years) and GDP per capita (in international ",
+      "dollars in 2005 prices)\nYear: {frame_time}"    
     ),
     x = "GDP per capita\n(in log scale)",
     y = "Life expectancy",
     caption = "Chart: Dzulfiqar Fathur Rahman | Source: Gapminder"
   ) +
   theme(
-    text = element_text(size = 12, color = color_primary),
+    text = element_text(size = 12, color = colorPrimary),
     axis.title = element_text(size = rel(0.75)),
-    axis.text = element_text(size = rel(0.75), color = color_primary),
+    axis.text = element_text(size = rel(0.75), color = colorPrimary),
     axis.line.x = element_line(color = "black"),
     axis.ticks.x = element_line(color = "black"),
     axis.ticks.y = element_blank(),
     panel.background = element_rect(fill = "#FFFFFF"),
-    panel.grid.major.x  = element_line(color = color_primary_light),
-    panel.grid.major.y = element_line(color = color_primary_light),
+    panel.grid.major.x  = element_line(color = colorPrimaryLight),
+    panel.grid.major.y = element_line(color = colorPrimaryLight),
     panel.grid.minor = element_blank(),
     plot.title = element_text(
       face = "bold", 
@@ -207,7 +222,7 @@ gapminder_chart <- ggplot(gapminder_grouped, aes(gdpPercap, lifeExp)) +
     ),
     plot.subtitle = element_text(
       size = rel(0.75), 
-      color = color_primary, 
+      color = colorPrimary, 
       margin = margin(b = 5)
     ),
     plot.title.position = "plot",
@@ -228,13 +243,13 @@ gapminder_chart <- ggplot(gapminder_grouped, aes(gdpPercap, lifeExp)) +
     plot.margin = margin(0, unit = "mm")
   )
 
-gapminder_animated <- gapminder_chart +
+plotGapminderAnimated <- plotGapminder +
   transition_time(year) +
   ease_aes()
 
 anim_save(
-  "gapminder_animated.gif",
-  animation = gapminder_animated,
+  "life-expectancy-income-per-cap.gif",
+  animation = plotGapminderAnimated,
   width = 6,
   height = 3.708,
   units = "in",
