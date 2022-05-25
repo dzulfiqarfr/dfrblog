@@ -1,0 +1,294 @@
+---
+title: "Bagaimana Katadata menganalisis preferensi pendengar Indonesia di Spotify?"
+description: |
+  Katadata mengumpulkan lagu-lagu yang paling sering diputar di Spotify dan daftar putar yang berkaitan dengan genre populer utama, termasuk dangdut
+date: 2022-05-25
+categories:
+  - data-journalism
+  - Katadata
+  - Spotify
+preview: images/preview-analisis-katadata-mood-lagu-spotify.png
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+# Packages
+library(knitr)
+library(tidyverse)
+library(gt)
+library(dfrtheme)
+library(gghighlight)
+
+# Global chunk options
+opts_chunk$set(
+  echo = FALSE, 
+  message = FALSE,
+  warning = FALSE,
+  fig.align = "center", 
+  out.width = "100%"
+)
+```
+
+Pada hari Senin, 23 Mei 2022, *Katadata* menerbitkan [artikel](https://katadata.co.id/ariayudhistira/analisisdata/6287a5383c274/selera-musik-di-indonesia-cenderung-lagu-sedih){target="_blank"} yang menganalisis preferensi pendengar Indonesia dan *mood* lagu-lagu dengan genre populer utama. Kami mengumpulkan data dari platform pemutar audio Spotify.
+
+Tulisan ini akan menjelaskan proses, asumsi dan keputusan-keputusan di balik analisis tersebut. Lebih penting lagi, tulisan ini juga membahas keterbatasan dari analisis ini dan bagaimana menerjemahkan datanya dengan mempertimbangkan keterbatasan tersebut.
+
+Saya tidak akan membahas sisi teknis dari analisis tersebut secara mendetail di sini. Namun, anda bisa cek kode dan data yang kami gunakan untuk menulis artikel tersebut di [*repository* GitHub ini](https://github.com/dzulfiqarfr/katadata-graphics/tree/main/2022/2022-05-23-spotify-song-mood){target="_blank"}.
+
+
+## Data
+
+Kami menggunakan dua himpunan data. Pertama, kami mengumpulkan lagu-lagu yang paling sering diputar. Untuk data ini, kami menggunakan daftar putar Lagu Teratas yang tersedia untuk 58 negara dan daerah di Spotify, termasuk Indonesia. Daftar putar ini, yang diperbarui setiap minggu, berisi 50 lagu.
+
+Set data ini memberikan kami 2.900 lagu secara keseluruhan. Daftar putar yang kami gunakan ini terakhir diperbarui pada 13 Mei 2022.
+
+Lagu-lagu tersebut tidak unik. Walaupun proses pembersihan data pada umumnya menyingkirkan duplikat, kami membiarkannya karena pendengar di Indonesia dan Afrika Selatan mungkin sering memutar lagu yang sama. Lagu "As It Was" dari Harry Styles, misalnya, muncul di 55 daftar putar Lagu Teratas.
+
+Kedua, kami menggunakan fasilitas pencarian di Spotify untuk mengumpulkan lagu-lagu sekaligus mengelompokkannya secara longgar menurut genre. Kami menggunakan masing-masing genre sebagai kata kunci. Kemudian kami mengarahkan pencariannya ke daftar putar yang berkaitan dengan genre tersebut, baik yang dikurasi oleh Spotify ataupun pengguna.
+
+Ada beberapa pengaturan yang penting terkait pencariannya. Pertama, kami hanya mengumpulkan lagu-lagu (dari berbagai musisi di berbagai negara) yang tersedia di pasar Indonesia. Kedua, kami membatasi hasil pencariannya ke 50 daftar lagu yang pertama muncul untuk masing-masing genre. Ketiga, kami hanya mengumpulkan 100 lagu pertama dari setiap daftar putar.
+
+Tentu, tidak semua pencarian memberikan persis 50 daftar putar dan tidak semua daftar putar memiliki 100 lagu, apalagi lebih.
+
+Kami menggunakan [artikel](https://en.wikipedia.org/wiki/Music_genre#Popular_music){target="_blank"} Wikipedia soal genre untuk memperoleh daftar genre populer utama. Berdasarkan daftar tersebut, kami memilih sembilan yang relatif lebih relevan untuk konteks analisis kami, yaitu elektronik, hip hop, jazz, pop, punk, reggae, rock, metal dan R&B. Lalu kami menambahkan dangdut, karena... siapa yang bisa bilang tidak ke lagu-lagu Didi Kempot?
+
+Set data ini memberikan kami 30.169 lagu. Lagi-lagi, kami membiarkan duplikat antargenre karena satu lagu bisa dianggap cocok dengan lebih dari satu genre.
+
+Namun, kami perlu menghapus beberapa lagu. Pertama, lagu yang tidak memiliki nilai untuk valensi, sebuah karakteristik audio yang kami perlukan untuk analisis. Kedua, lagu-lagu yang berdurasi lebih dari 10 menit. Ketiga, lagu-lagu yang memiliki karakteristik mirip dengan gelar wicara, buku yang dibacakan (*audiobook*) atau puisi. Proses pembersihan ini menyisakan kami dengan 30.013 lagu.
+
+```{r table on count of songs by major popular genre}
+#| fig.alt="Sebuah tabel yang menunjukkan jumlah sampel lagu dari Spotify menurut genre populer utama. Tabel ini menunjukkan bahwa ada lebih dari 3.000 lagu untuk sebagian besar genre. Sampel untuk reggae dan metal lebih dari 2.000. Untuk dangdut, lagu yang berhasil dikumpulkan mencapai 1.782"
+
+genreRaw <- read_csv("data/spotify-major-popular-genre-playlist.csv")
+
+genreClean <- genreRaw |>
+  filter(
+    !is.na(valence),
+    duration_ms <= 600000,
+    speechiness <= 0.66
+  ) |> 
+  group_by(genre) |> 
+  distinct(track_id, .keep_all = TRUE) |> 
+  ungroup() |> 
+  mutate(
+    genre = str_to_sentence(genre),
+    genre = str_replace(genre, "R&b", "R&B")
+  )
+
+genreClean |> 
+  count(genre, sort = TRUE) |> 
+  mutate(n = format(n, big.mark = ".")) |> 
+  rename(Genre = genre) |> 
+  gt() |> 
+  cols_align(align = "right", columns = n) |> 
+  tab_header(title = md("**Sampel lagu menurut genre**")) |> 
+  tab_source_note(source_note = "Sumber: Spotify; analisis penulis") |> 
+  tab_source_note(source_note = "Tabel: penulis") |> 
+  tab_style(
+    style = cell_text(align = "left"),
+    locations = cells_title()
+  ) |> 
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_column_labels()
+  ) |>
+  tab_options(
+    table.border.top.color = "white",
+    table.border.bottom.color = "white",
+    heading.border.bottom.color = "white",
+    column_labels.border.bottom.color = "black",
+    table_body.hlines.width = px(0.25)
+  )
+```
+
+
+## Valensi
+
+Kami tertarik untuk mengetahui preferensi pendengar Indonesia berdasarkan *mood* lagu. Untuk itu, kami menggunakan valensi. Spotify menyusun ukuran persepsi ini untuk menggambarkan "kepositifan musik" sebuah lagu dengan skala antara 0 dan 1. Algoritme ini dilatih berdasarkan peringkat kepositifan lagu oleh para ahli, menurut media mingguan *The Economist*.
+
+Lagu dengan valensi yang tinggi terdengar lebih positif, misalnya bahagia, ceria atau antusias. Sebaliknya, lagu dengan valensi yang rendah terdengar lebih negatif, misalnya sedih, murung atau marah.
+
+Namun, tidak semua lagu dengan lirik yang murung memiliki valensi yang rendah, seperti lagu "Hati-Hati di Jalan" oleh Tulus.
+
+Ada dua variabel lain relevan untuk memahami ini. Pertama, *danceability*, yang menggambarkan seberapa cocok sebuah lagu untuk berdansa atau menari dalam skala antara 0 dan 1 menurut "tempo, stabilitas ritme, kekuatan ketukan dan keteraturan keseluruhan." Kedua, energi, sebuah ukuran persepsi terkait intensitas dan aktivitas dengan skala yang sama. Lagu yang energik biasanya terdengar cepat, keras dan berisik.
+
+Valensi memiliki korelasi positif dengan *danceability* dan energi. Lagu "Hati-Hati di Jalan" memiliki *danceability* dan energi yang lumayan tinggi, yaitu masing-masing 0,64 dan 0,43.
+
+```{r song distribution by valence and danceability}
+#| fig.width=8, 
+#| fig.height=7, 
+#| dpi=96, 
+#| out.width="70%",
+#| fig.alt="Grafik yang menunjukkan distribusi lagu menurut valensi dan danceability dengan heksagon menggunakan data dari Spotify. Semakin banyak titik data yang terlihat dalam sebuah bins dua dimensi ini, warna heksagonnya akan menjadi semakin biru. Grafik ini menunjukkan bahwa mayoritas lagu yang memiliki valensi relatif tinggi juga memiliki danceability yang relatif tinggi"
+
+captionBase <- paste0(
+  "Sumber: Spotify; analisis penulis<br>",
+  "Grafik: penulis"
+)
+
+ggplot(
+  data = genreClean,
+  mapping = aes(x = danceability, y = valence)
+) +
+  geom_hex(
+    size = 0.25, 
+    color = "white",
+    lwd = 0.25,
+    binwidth = c(0.04, 0.04)
+  ) +
+  scale_x_continuous(
+    limits = c(0, 1),
+    labels = c(0, 0.25, 0.5, 0.75, 1)
+  ) +
+  scale_y_continuous(
+    limits = c(0, 1),
+    labels = c(0, 0.25, 0.5, 0.75, 1),
+    expand = c(0, 0),
+    position = "right"
+  ) +
+  scale_fill_steps(
+    breaks = seq(20, 100, 20),
+    low = "#E5E9F0FF", 
+    high = "#647D96FF"
+  ) +
+  labs(
+    title = "Lagu-lagu yang positif cenderung cocok untuk berdansa/menari",
+    subtitle = "Valensi dan *danceability* lagu-lagu yang dipilih di Spotify",
+    x = "*Danceability*",
+    y = "Valensi",
+    fill = "Jumlah titik data",
+    caption = paste0(
+      "Sumber: Spotify; analisis penulis<br>",
+      "Grafik: penulis"
+    )
+  ) +
+  dfr_theme() +
+  theme(
+    axis.ticks.x = element_line(color = "black"),
+    axis.line.x = element_line(color = "black"),
+    legend.justification = c(0, 1),
+    legend.position = c(0.025, 0.875),
+    legend.title = element_text(color = "#757575"),
+    plot.margin = margin()
+  )
+```
+
+
+Walaupun mencerminkan *mood* <strong>lagu</strong>, valensi belum tentu mewakili kebahagiaan <strong>pendengar</strong>. Bagi sebagian orang, suasana hati menentukan lagu yang mereka pilih. 
+
+Kadang-kadang, saya juga begitu. Tapi lagu yang sering saya putar belum tentu mencerminkan suasana hati saya. Saya lumayan sering memutar lagu "Both Sides Now" dari Joni Mitchell. Lagu ini mendapat valensi serendah 0,26. Tapi bukan berarti saya sering murung. (Atau iya? &#129300;)
+
+
+## Daftar putar Lagu Teratas
+
+Daftar putar Lagu Teratas Indonesia memperoleh 34.594 suka per 22 Mei 2022; Lagu Teratas Global memperoleh 767.121 suka pada waktu yang sama. Walaupun jumlah suka ini (dan jumlah pemutaran lagu-lagunya) belum tentu mewakili selera semua pengguna Spotify, daftar putar ini cukup baik untuk memperkirakan preferensi pendengar pada umumnya.
+
+Namun, daftar putar ini hanya menggambarkan lagu-lagu yang paling sering diputar dalam periode tertentu, terutama ketika datanya dikumpulkan.
+
+Dengan demikian, kami tidak bisa menggeneralisasi temuan analisisnya ke periode lain. Preferensi pendengar di Indonesia pada pertengahan bulan Mei mungkin berbeda dengan akhir bulan Desember. Lagu-lagu yang ceria mungkin lebih sering diputar dari biasanya menjelang Natal dan tahun baru.
+
+*The Economist* menemukan bahwa terdapat pola musiman dalam preferensi pendengar di Spotify, berdasarkan analisis terhadap 200 lagu yang paling sering diputar per hari antara 1 Januari 2017 dan 29 Januari 2020.
+
+
+## Lagu-lagu genre populer utama
+
+Klasifikasi tidak selalu mudah, mungkin terutama dalam seni seperti musik. Kami mengelompokkan lagu-lagu berdasarkan daftar putar yang berkaitan dengan masing-masing genre menggunakan fasilitas pencarian Spotify. Tentu, seharusnya ada cara yang lebih teliti dari ini.
+
+Kami tidak ingin mengklaim bahwa sampel kami representatif. Lagu unik dengan genre populer utama yang kami kumpulkan hanya 28.437 atau kira-kira kurang dari 0,001 persen dari total lagu yang tersedia di Spotify pada saat penulisan.
+
+Kami tidak menggunakan semua genre populer utama, seperti *country*, latin atau funk. Kami juga tidak melakukan klasifikasi berdasarkan genre turunan atau yang berkaitan. Untuk konteks Indonesia, kami tidak memasukkan genre yang berkaitan dengan wilayah atau etnis tertentu, seperti lagu Batak.
+
+Daftar putar yang kami kumpulkan sebagian dikurasi oleh pengguna, sehingga selera dan pengetahuan mereka menentukan lagu apa saja yang masuk ke dalam daftar putarnya. Sementara itu, tidak semua pengguna (termasuk saya) memiliki keahlian dalam musik, apalagi menentukan genre sebuah lagu.
+
+Jumlah hasil pencarian terhadap daftar putar (dan lagu-lagu di dalamnya) juga menentukan kualitas set datanya. Semakin banyak daftar putar yang dikumpulkan, semakin besar kemungkinan menemukan lagu yang mungkin terdengar tidak cocok dikelompokkan dalam genre tertentu. Misalnya, lagu "Pelangi" dari HiVi! masuk ke salah satu daftar putar yang muncul dalam pencarian dengan kata kunci "jazz" di Spotify.
+
+Dengan banyaknya lagu yang memiliki ciri-ciri yang cocok dengan lebih dari satu genre, tidak mudah untuk menentukan apakah sebuah lagu relevan untuk genre tertentu dalam skala yang besar, apalagi memisahkan mana yang salah diklasifikasi.
+
+Beberapa genre mungkin memiliki ciri khas yang mudah dikenali, seperti rap. Lagu-lagunya bisa dikenali dengan salah satu karakteristik audio yang disediakan oleh Spotify, yaitu *speechiness*.
+
+Terakhir, kami berusaha untuk memperkirakan tren *mood* lagu masing-masing genre dengan rata-rata valensi. Namun, data agregasi seperti ini hanya satu bagian dari gambar yang lebih besar. Dalam jazz yang cenderung terdengar murung menurut rata-rata valensinya, ada lagu-lagu seperti "Mati Saja" dari Barry Likumahuwa yang terdengar positif menurut Spotify.
+
+```{r song distribution by valence and genre}
+#| fig.width=8,
+#| fig.height=5,
+#| dpi=96, 
+#| out.width="70%",
+#| fig.alt="Grafik ini menunjukkan distribusi lagu menurut valensi per genre populer utama menggunakan density plot berdasarkan data Spotify. Grafik ini mengungkapkan bahwa reggae dan dangdut punya distribusi yang memuncak ke valensi tinggi. Sebaliknya, jazz, metal dan electronic punya disitribusi yang terpusat di valensi rendah. Sementara itu, genre-genre lain punya distribusi yang cenderung merata"
+
+ggplot(
+  data = genreClean, 
+  mapping = aes(x = valence),
+  
+) +
+  geom_density(
+    mapping = aes(color = genre),
+    lwd = 1.25,
+    key_glyph = "path"
+  ) +
+  geom_text(
+    data = tibble(x = 0.75, y = 1.5, label = "Genre lain"),
+    mapping = aes(x = x, y = y, label = label),
+    size = dfr_convert_font_size(),
+    color = "grey",
+    nudge_y = 0.1
+  ) +
+  gghighlight(
+    genre %in% c("Dangdut", "Reggae", "Jazz", "Electronic", "Metal"),
+    unhighlighted_colour = "lightgrey",
+    unhighlighted_params = list(size = 1)
+  ) +
+  scale_color_manual(
+    values = c(
+        "Reggae" = "#19324BFF",
+        "Dangdut" = "#4B647DFF", 
+        "Jazz" = "#C87D4BFF", 
+        "Electronic" = "#C89664FF",
+        "Metal" = "#7D4B19FF"
+    )
+  ) +
+  scale_x_continuous(
+    limits = c(0, 1),
+    labels = c(0, 0.25, 0.5, 0.75, 1)
+  ) +
+  scale_y_continuous(
+    breaks = seq(0, 3, 1),
+    limits = c(0, 3),
+    expand = c(0, 0),
+    position = "right"
+  ) +
+  labs(
+    title = "Beberapa genre memiliki kecenderungan terhadap *mood* tertentu",
+    subtitle = "Distribusi lagu menurut valensi dan genre",
+    x = "Valensi",
+    y = "Densitas",
+    caption = captionBase
+  ) +
+  dfr_theme() +
+  theme(
+    axis.ticks.x = element_line(color = "black"),
+    axis.line.x = element_line(color = "black"),
+    legend.justification = c(0, 1),
+    legend.position = c(0.05, 0.96),
+    panel.grid.major.x = element_blank(),
+    plot.margin = margin()
+  )
+```
+
+
+## Penutup
+
+Terlepas dari semua ini, saya hanya berharap artikelnya memberikan jeda yang menghibur dari berita-berita serius.
+
+
+## Referensi
+
+- [Exploring the Spotify API with R: A tutorial for beginners, by a beginner](https://msmith7161.github.io/what-is-speechiness/){target="_blank"} oleh Mia Smith
+
+- [Understanding + classifying genres using Spotify audio features](https://www.kaylinpavlik.com/classifying-songs-genres/){target="_blank"} oleh Kaylin Pavlik
+
+- [Data from Spotify suggest that listeners are gloomiest in February](https://www.economist.com/graphic-detail/2020/02/08/data-from-spotify-suggest-that-listeners-are-gloomiest-in-february){target="_blank"} oleh *The Economist*
+
+- Cek juga [#TidyTuesday](https://twitter.com/search?q=%23tidytuesday%20spotify&src=typed_query){target="_blank"}
