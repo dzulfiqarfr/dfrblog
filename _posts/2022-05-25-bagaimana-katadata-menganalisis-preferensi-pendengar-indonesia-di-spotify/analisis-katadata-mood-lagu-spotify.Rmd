@@ -113,7 +113,7 @@ Lagu dengan valensi yang tinggi terdengar lebih positif, misalnya bahagia, ceria
 
 Namun, tidak semua lagu dengan lirik yang murung memiliki valensi yang rendah, seperti lagu "Hati-Hati di Jalan" oleh Tulus.
 
-Ada dua variabel lain relevan untuk memahami ini. Pertama, *danceability*, yang menggambarkan seberapa cocok sebuah lagu untuk berdansa atau menari dalam skala antara 0 dan 1 menurut "tempo, stabilitas ritme, kekuatan ketukan dan keteraturan keseluruhan." Kedua, energi, sebuah ukuran persepsi terkait intensitas dan aktivitas dengan skala yang sama. Lagu yang energik biasanya terdengar cepat, keras dan berisik.
+Ada dua variabel lain yang relevan untuk memahami ini. Pertama, *danceability*, yang menggambarkan seberapa cocok sebuah lagu untuk berdansa atau menari dalam skala antara 0 dan 1 menurut "tempo, stabilitas ritme, kekuatan ketukan dan keteraturan keseluruhan." Kedua, energi, sebuah ukuran persepsi terkait intensitas dan aktivitas dengan skala yang sama. Lagu yang energik biasanya terdengar cepat, keras dan berisik.
 
 Valensi memiliki korelasi positif dengan *danceability* dan energi. Lagu "Hati-Hati di Jalan" memiliki *danceability* dan energi yang lumayan tinggi, yaitu masing-masing 0,64 dan 0,43.
 
@@ -197,9 +197,7 @@ Dengan demikian, kami tidak bisa menggeneralisasi temuan analisisnya ke periode 
 
 Klasifikasi tidak selalu mudah, mungkin terutama dalam seni seperti musik. Kami mengelompokkan lagu-lagu berdasarkan daftar putar yang berkaitan dengan masing-masing genre menggunakan fasilitas pencarian Spotify. Tentu, seharusnya ada cara yang lebih teliti dari ini.
 
-Kami tidak ingin mengklaim bahwa sampel kami representatif. Lagu unik dengan genre populer utama yang kami kumpulkan hanya 28.437 atau kira-kira kurang dari 0,001 persen dari total lagu yang tersedia di Spotify pada saat penulisan.
-
-Kami tidak menggunakan semua genre populer utama, seperti *country*, latin atau funk. Kami juga tidak melakukan klasifikasi berdasarkan genre turunan atau yang berkaitan. Untuk konteks Indonesia, kami tidak memasukkan genre yang berkaitan dengan wilayah atau etnis tertentu, seperti lagu Batak.
+Kami tidak ingin mengklaim bahwa sampel kami representatif. Kami tidak mencakup semua genre populer utama, seperti *country*, latin atau funk. Kami juga tidak melakukan klasifikasi berdasarkan genre turunan atau yang berkaitan. Untuk konteks Indonesia, kami tidak memasukkan genre yang berkaitan dengan wilayah atau etnis tertentu, seperti lagu Batak.
 
 Daftar putar yang kami kumpulkan sebagian dikurasi oleh pengguna, sehingga selera dan pengetahuan mereka menentukan lagu apa saja yang masuk ke dalam daftar putarnya. Sementara itu, tidak semua pengguna (termasuk saya) memiliki keahlian dalam musik, apalagi menentukan genre sebuah lagu.
 

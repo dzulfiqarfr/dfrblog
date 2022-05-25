@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -49,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -72,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -102,26 +104,32 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="A recap of my data journalism at The Jakarta Post between 2021 and 2022. From the COVID-19 pandemic&#39;s impact on wages to the decline in homeownership"/>
 <meta property="og:url" content="https://dzulfiqarfr.com/posts/2022-03-18-my-data-driven-stories-on-the-jakarta-post/"/>
+<meta property="og:image" content="https://dzulfiqarfr.com/posts/2022-03-18-my-data-driven-stories-on-the-jakarta-post/images/preview-jakpost-graphics.png"/>
+<meta property="og:image:width" content="2560"/>
+<meta property="og:image:height" content="1280"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="dfrblog"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary"/>
+<meta property="twitter:card" content="summary_large_image"/>
 <meta property="twitter:title" content="dfrblog: My data-driven stories on The Jakarta Post"/>
 <meta property="twitter:description" content="A recap of my data journalism at The Jakarta Post between 2021 and 2022. From the COVID-19 pandemic&#39;s impact on wages to the decline in homeownership"/>
 <meta property="twitter:url" content="https://dzulfiqarfr.com/posts/2022-03-18-my-data-driven-stories-on-the-jakarta-post/"/>
+<meta property="twitter:image" content="https://dzulfiqarfr.com/posts/2022-03-18-my-data-driven-stories-on-the-jakarta-post/images/preview-jakpost-graphics.png"/>
+<meta property="twitter:image:width" content="2560"/>
+<meta property="twitter:image:height" content="1280"/>
 <meta property="twitter:creator" content="@dzulfiqarfr"/>
 
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","date","categories","preview","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["My data-driven stories on The Jakarta Post"]},{"type":"character","attributes":{},"value":["A recap of my data journalism at The Jakarta Post between 2021 and 2022. From the COVID-19 pandemic's impact on wages to the decline in homeownership"]},{"type":"character","attributes":{},"value":["2022-03-18"]},{"type":"character","attributes":{},"value":["data-visualization","data-journalism","The-Jakarta-Post"]},{"type":"character","attributes":{},"value":["images/jakpost-graphics.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://dzulfiqarfr.com/posts/2022-03-18-my-data-driven-stories-on-the-jakarta-post/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creative_commons","title","description","date","categories","preview","output","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["CC BY"]},{"type":"character","attributes":{},"value":["My data-driven stories on The Jakarta Post"]},{"type":"character","attributes":{},"value":["A recap of my data journalism at The Jakarta Post between 2021 and 2022. From the COVID-19 pandemic's impact on wages to the decline in homeownership"]},{"type":"character","attributes":{},"value":["2022-03-18"]},{"type":"character","attributes":{},"value":["data-visualization","data-journalism","The-Jakarta-Post"]},{"type":"character","attributes":{},"value":["images/preview-jakpost-graphics.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://dzulfiqarfr.com/posts/2022-03-18-my-data-driven-stories-on-the-jakarta-post/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["images/consumer-confidence-retail-sales.png","images/delta-wave-impact.png","images/emission-economic-growth.png","images/fdi-china-us.png","images/foreign-guest-share.png","images/homeownership.png","images/house-price-index.png","images/import-contribution-change.png","images/jakpost-graphics.png","images/labor-service-sector-distribution-by-education.png","images/manufacturing-value-added-share.png","images/migration-grdp.png","images/mobility-covid.png","images/mortgage.png","images/net-lifetime-migration.png","images/phdi.png","images/population-gdp-distribution.png","images/retirement.png","images/trade-share-china-us-other.png","images/vaccination-rate-income-group.png","images/wage-minimum.png","images/wage-unemployment.png","images/wage-value-added-growth.png","images/wealth-contribution-growth.png","images/wealth-distribution.png","images/weo-revision.png","my-data-driven-stories-on-the-jakarta-post_files/anchor-4.2.2/anchor.min.js","my-data-driven-stories-on-the-jakarta-post_files/bowser-1.9.3/bowser.min.js","my-data-driven-stories-on-the-jakarta-post_files/distill-2.2.21/template.v2.js","my-data-driven-stories-on-the-jakarta-post_files/header-attrs-2.11/header-attrs.js","my-data-driven-stories-on-the-jakarta-post_files/header-attrs-2.13/header-attrs.js","my-data-driven-stories-on-the-jakarta-post_files/jquery-3.6.0/jquery-3.6.0.js","my-data-driven-stories-on-the-jakarta-post_files/jquery-3.6.0/jquery-3.6.0.min.js","my-data-driven-stories-on-the-jakarta-post_files/jquery-3.6.0/jquery-3.6.0.min.map","my-data-driven-stories-on-the-jakarta-post_files/popper-2.6.0/popper.min.js","my-data-driven-stories-on-the-jakarta-post_files/tippy-6.2.7/tippy-bundle.umd.min.js","my-data-driven-stories-on-the-jakarta-post_files/tippy-6.2.7/tippy-light-border.css","my-data-driven-stories-on-the-jakarta-post_files/tippy-6.2.7/tippy.css","my-data-driven-stories-on-the-jakarta-post_files/tippy-6.2.7/tippy.umd.min.js","my-data-driven-stories-on-the-jakarta-post_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["images/consumer-confidence-retail-sales.png","images/delta-wave-impact.png","images/emission-economic-growth.png","images/fdi-china-us.png","images/foreign-guest-share.png","images/homeownership.png","images/house-price-index.png","images/import-contribution-change.png","images/labor-service-sector-distribution-by-education.png","images/manufacturing-value-added-share.png","images/migration-grdp.png","images/mobility-covid.png","images/mortgage.png","images/net-lifetime-migration.png","images/phdi.png","images/population-gdp-distribution.png","images/preview-jakpost-graphics.png","images/retirement.png","images/trade-share-china-us-other.png","images/vaccination-rate-income-group.png","images/wage-minimum.png","images/wage-unemployment.png","images/wage-value-added-growth.png","images/wealth-contribution-growth.png","images/wealth-distribution.png","images/weo-revision.png","my-data-driven-stories-on-the-jakarta-post_files/anchor-4.2.2/anchor.min.js","my-data-driven-stories-on-the-jakarta-post_files/bowser-1.9.3/bowser.min.js","my-data-driven-stories-on-the-jakarta-post_files/distill-2.2.21/template.v2.js","my-data-driven-stories-on-the-jakarta-post_files/header-attrs-2.11/header-attrs.js","my-data-driven-stories-on-the-jakarta-post_files/header-attrs-2.13/header-attrs.js","my-data-driven-stories-on-the-jakarta-post_files/jquery-3.6.0/jquery-3.6.0.js","my-data-driven-stories-on-the-jakarta-post_files/jquery-3.6.0/jquery-3.6.0.min.js","my-data-driven-stories-on-the-jakarta-post_files/jquery-3.6.0/jquery-3.6.0.min.map","my-data-driven-stories-on-the-jakarta-post_files/popper-2.6.0/popper.min.js","my-data-driven-stories-on-the-jakarta-post_files/tippy-6.2.7/tippy-bundle.umd.min.js","my-data-driven-stories-on-the-jakarta-post_files/tippy-6.2.7/tippy-light-border.css","my-data-driven-stories-on-the-jakarta-post_files/tippy-6.2.7/tippy.css","my-data-driven-stories-on-the-jakarta-post_files/tippy-6.2.7/tippy.umd.min.js","my-data-driven-stories-on-the-jakarta-post_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2077,7 +2085,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.13/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.14/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2136,159 +2144,298 @@ gtag('config', 'G-3ZTN8BVWSZ');
   <a href="../../blog.html#category:The-Jakarta-Post" class="dt-tag">The-Jakarta-Post</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>A recap of my data journalism at The Jakarta Post between 2021 and 2022. From the COVID-19 pandemic’s impact on wages to the decline in homeownership</p></p>
+<p><p>A recap of my data journalism at The Jakarta Post between 2021 and
+2022. From the COVID-19 pandemic’s impact on wages to the decline in
+homeownership</p></p>
 </div>
 
 
 <div class="d-article">
-<p>Do you know that The Jakarta Post (JakPost) has been publishing data-driven stories? JakPost did not have a data journalism desk or section on the website and the newspaper. But my colleagues and I had been wrangling data to find stories.</p>
-<p>This post compiles the data visualizations from my 14 selected stories between mid-2021 and March 2022. Since there was no data journalism desk, I worked on these stories with the business desk. So my stories are largely related to the impact of COVID-19 on livelihoods.</p>
-<p>When working on these stories, I was still learning and trying to figure out some stuff. (Actually, I still do.) Writing this post, therefore, has allowed me to not just look back at what I’ve achieved, but also see what I could have done better. As a result, I recreated the charts and map with a couple improvements where necessary.</p>
-<p>You can find the code and data behind these visualizations in <a href="https://github.com/dzulfiqarfr/jakpost-graphics">this GitHub repository</a>. The repo also tells you the changes I’ve made to them.</p>
+<p>Do you know that The Jakarta Post (JakPost) has been publishing
+data-driven stories? JakPost did not have a data journalism desk or
+section on the website and the newspaper. But my colleagues and I had
+been wrangling data to find stories.</p>
+<p>This post compiles the data visualizations from my 14 selected
+stories between mid-2021 and March 2022. Since there was no data
+journalism desk, I worked on these stories with the business desk. So my
+stories are largely related to the impact of COVID-19 on
+livelihoods.</p>
+<p>When working on these stories, I was still learning and trying to
+figure out some stuff. (Actually, I still do.) Writing this post,
+therefore, has allowed me to not just look back at what I’ve achieved,
+but also see what I could have done better. As a result, I recreated the
+charts and map with a couple improvements where necessary.</p>
+<p>You can find the code and data behind these visualizations in <a
+href="https://github.com/dzulfiqarfr/jakpost-graphics">this GitHub
+repository</a>. The repo also tells you the changes I’ve made to
+them.</p>
 <p>Enjoy!</p>
-<h2 id="indonesia-remains-java-centric-despite-jokowis-infrastructure-campaign">Indonesia remains Java-centric despite Jokowi’s infrastructure campaign</h2>
+<h2
+id="indonesia-remains-java-centric-despite-jokowis-infrastructure-campaign">Indonesia
+remains Java-centric despite Jokowi’s infrastructure campaign</h2>
 <p>May 23, 2021</p>
-<p>Read the story on <a href="https://www.thejakartapost.com/news/2021/05/23/indonesia-remains-java-centric-despite-jokowis-infrastructure-campaign.html">this link</a>.</p>
-<p>The first chart in this story shows that population and economic development had remained too concentrated in Java between 1971 and 2020.</p>
+<p>Read the story on <a
+href="https://www.thejakartapost.com/news/2021/05/23/indonesia-remains-java-centric-despite-jokowis-infrastructure-campaign.html">this
+link</a>.</p>
+<p>The first chart in this story shows that population and economic
+development had remained too concentrated in Java between 1971 and
+2020.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/population-gdp-distribution.png" title="A stacked-column chart with two panels. The left-hand panel shows the share of population by island group between 1971 and 2020 based on data from Statistics Indonesia (BPS). The left-hand panel shows that Java still accounted for over half of the population in 2020. The population share of the island was lower than in 1971, but the decline was sluggish. The right-hand panel shows the distribution of real gross domestic product (GDP) between 2010 and 2020. The right-hand panel reveals that Java also accounted for more than half of the GDP over the period." alt="A stacked-column chart with two panels. The left-hand panel shows the share of population by island group between 1971 and 2020 based on data from Statistics Indonesia (BPS). The left-hand panel shows that Java still accounted for over half of the population in 2020. The population share of the island was lower than in 1971, but the decline was sluggish. The right-hand panel shows the distribution of real gross domestic product (GDP) between 2010 and 2020. The right-hand panel reveals that Java also accounted for more than half of the GDP over the period." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<p>The second chart shows that provinces with a higher per capita income tended to have more incoming lifetime migrants relative to their population.</p>
+<p>The second chart shows that provinces with a higher per capita income
+tended to have more incoming lifetime migrants relative to their
+population.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/migration-grdp.png" title="A scatter plot based on data from BPS. The x-axis plots real gross regional domestic product (GRDP) per capita in 2020 by province. The y-axis plots incoming lifetime migrants relative to population in 2019 by province. The chart shows that provinces with a higher GRDP per capita tended to have a larger share of incoming lifetime migrants. Riau Islands, for example, had Rp 84.74 million income per head and lifetime migrants that accounted for 46.4 percent of the population." alt="A scatter plot based on data from BPS. The x-axis plots real gross regional domestic product (GRDP) per capita in 2020 by province. The y-axis plots incoming lifetime migrants relative to population in 2019 by province. The chart shows that provinces with a higher GRDP per capita tended to have a larger share of incoming lifetime migrants. Riau Islands, for example, had Rp 84.74 million income per head and lifetime migrants that accounted for 46.4 percent of the population." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<p>The following map shows that lifetime migrants also tended to choose neighboring provinces or the ones closest to their home.</p>
+<p>The following map shows that lifetime migrants also tended to choose
+neighboring provinces or the ones closest to their home.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/net-lifetime-migration.png" title="A choropleth map with a red-to-blue diverging scale that shows net lifetime migration relative to population in 2019 based on data from BPS. The map shows that lifetime migrants tended to choose neighboring provinces or the ones closes to their home." alt="A choropleth map with a red-to-blue diverging scale that shows net lifetime migration relative to population in 2019 based on data from BPS. The map shows that lifetime migrants tended to choose neighboring provinces or the ones closes to their home." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<h2 id="covid-19-takes-severe-toll-on-wages">COVID-19 takes severe toll on wages</h2>
+<h2 id="covid-19-takes-severe-toll-on-wages">COVID-19 takes severe toll
+on wages</h2>
 <p>June 14, 2021</p>
-<p>Read the story on <a href="https://www.thejakartapost.com/news/2021/06/14/covid-19-takes-severe-toll-on-wages.html">this link</a>.</p>
-<p>The first chart in this story shows that the average net wage in real terms declined in August 2020 from a year earlier, while the unemployment rate rose sharply to a level not seen at least in the past four years.</p>
+<p>Read the story on <a
+href="https://www.thejakartapost.com/news/2021/06/14/covid-19-takes-severe-toll-on-wages.html">this
+link</a>.</p>
+<p>The first chart in this story shows that the average net wage in real
+terms declined in August 2020 from a year earlier, while the
+unemployment rate rose sharply to a level not seen at least in the past
+four years.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/wage-unemployment.png" title="A line chart with two panels based on data from BPS, the World Bank and my analysis. The left-hand panel shows that the average net wage at 2010 prices was down 7.18 percent in August 2020 from a year earlier. This left-hand panel also shows that wage had been growing at a sluggish pace, if not contracting, since late 2017. The right-hand panel shows that the unemployment rate rose to 7.07 percent in August 2020, a level not seen at least in the past four years." alt="A line chart with two panels based on data from BPS, the World Bank and my analysis. The left-hand panel shows that the average net wage at 2010 prices was down 7.18 percent in August 2020 from a year earlier. This left-hand panel also shows that wage had been growing at a sluggish pace, if not contracting, since late 2017. The right-hand panel shows that the unemployment rate rose to 7.07 percent in August 2020, a level not seen at least in the past four years." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<p>The second chart shows that sectors that fared better, such as information and communication, recorded a smaller decline in its real wage. Meanwhile, hard-hit sectors like transportation and storage recorded a steeper decline in its real wage.</p>
+<p>The second chart shows that sectors that fared better, such as
+information and communication, recorded a smaller decline in its real
+wage. Meanwhile, hard-hit sectors like transportation and storage
+recorded a steeper decline in its real wage.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/wage-value-added-growth.png" title="A scatter plot based on data from BPS, the World Bank and my analysis. The x-axis plots the annual change in gross value added in 2020 by sector. The y-axis plots the annual change in the average net wage in 2020 by sector. All data are at 2010 prices. The chart shows wages fell steeper in sectors that fared worse, such as acommodation and food service activities. In this sector, the wage fell by 18.69 percent as the output shrank by 10.26 percent." alt="A scatter plot based on data from BPS, the World Bank and my analysis. The x-axis plots the annual change in gross value added in 2020 by sector. The y-axis plots the annual change in the average net wage in 2020 by sector. All data are at 2010 prices. The chart shows wages fell steeper in sectors that fared worse, such as acommodation and food service activities. In this sector, the wage fell by 18.69 percent as the output shrank by 10.26 percent." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<p>The next chart shows that while the average net wage in the majority of provinces stayed above the minimum wage in nominal terms, it fell to a level below the floor in Jakarta or even further below the floor in some provinces, such as West Sulawesi.</p>
+<p>The next chart shows that while the average net wage in the majority
+of provinces stayed above the minimum wage in nominal terms, it fell to
+a level below the floor in Jakarta or even further below the floor in
+some provinces, such as West Sulawesi.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/wage-minimum.png" title="A dot plot with two panels that compares nominal average net wage and minimum wage between 2020 and 2021 by province based on data from BPS. The left-hand panel shows that wages in most provinces remained higher than the floor. The right-hand panel, however, shows that some provinces recorded wages below the floor, including Jakarta, where the average wage was Rp 4.11 million and the floor was Rp 4.41 million." alt="A dot plot with two panels that compares nominal average net wage and minimum wage between 2020 and 2021 by province based on data from BPS. The left-hand panel shows that wages in most provinces remained higher than the floor. The right-hand panel, however, shows that some provinces recorded wages below the floor, including Jakarta, where the average wage was Rp 4.11 million and the floor was Rp 4.41 million." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<h2 id="indonesian-homeownership-slides-as-affordability-issues-arise">Indonesian homeownership slides as affordability issues arise</h2>
+<h2
+id="indonesian-homeownership-slides-as-affordability-issues-arise">Indonesian
+homeownership slides as affordability issues arise</h2>
 <p>June 28, 2021</p>
-<p>Read the story on <a href="https://www.thejakartapost.com/news/2021/06/28/indonesian-homeownership-slides-as-affordability-issues-arise.html">this link</a>.</p>
-<p>The first chart in this story shows that homeownership slightly fell between 1999 and 2020 in general. Bali and Jakarta recorded a significant decline, while Bengkulu and Jambi recorded a small increase in homeownership.</p>
+<p>Read the story on <a
+href="https://www.thejakartapost.com/news/2021/06/28/indonesian-homeownership-slides-as-affordability-issues-arise.html">this
+link</a>.</p>
+<p>The first chart in this story shows that homeownership slightly fell
+between 1999 and 2020 in general. Bali and Jakarta recorded a
+significant decline, while Bengkulu and Jambi recorded a small increase
+in homeownership.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/homeownership.png" title="A chart with two panels on homeownership based on data from BPS. The left-hand panel is a line chart that plots the share of households with a home of their own between 1999 and 2020, indexed to 1999. The left-hand panel shows that homeownership at the national level fell by over 5 points and in Jakarta fell sharply by over 30 points. The right-hand panel is a bar chart that plots the bottom 10 provinces in terms of homeownership in 2020. It shows that homeownership in Jakarta was the lowest at 45 percent." alt="A chart with two panels on homeownership based on data from BPS. The left-hand panel is a line chart that plots the share of households with a home of their own between 1999 and 2020, indexed to 1999. The left-hand panel shows that homeownership at the national level fell by over 5 points and in Jakarta fell sharply by over 30 points. The right-hand panel is a bar chart that plots the bottom 10 provinces in terms of homeownership in 2020. It shows that homeownership in Jakarta was the lowest at 45 percent." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<p>The next chart shows that house prices had been growing at a slower pace at least since 2014. In Bandar Lampung, Lampung, house prices declined during the pandemic.</p>
+<p>The next chart shows that house prices had been growing at a slower
+pace at least since 2014. In Bandar Lampung, Lampung, house prices
+declined during the pandemic.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/house-price-index.png" title="A line chart that plots the residential property price index (or IHPR) between the January to March period in 2012 and the April to June period in 2021 by city based on data from Bank Indonesia (BI). The chart shows that house prices had been growing at a slower pace at least since 2014 at the national level." alt="A line chart that plots the residential property price index (or IHPR) between the January to March period in 2012 and the April to June period in 2021 by city based on data from Bank Indonesia (BI). The chart shows that house prices had been growing at a slower pace at least since 2014 at the national level." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<p>The next chart shows that the average monthly mortgage payment in Jakarta and Yogyakarta was unusually high in 2019, given the mortgage terms.</p>
+<p>The next chart shows that the average monthly mortgage payment in
+Jakarta and Yogyakarta was unusually high in 2019, given the mortgage
+terms.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/mortgage.png" title="A scatter plot based on data from BPS. The x-axis plots the average mortgage payment per month in 2019 by province. The y-axis plots the average mortgage terms in 2019 by province. The chart shows that lower monthly mortgage payment is associated with longer mortgage terms. In Jakarta, however, the average payment was unusually high at Rp 6 million per month, while the mortgage terms averaged at 10.64 years." alt="A scatter plot based on data from BPS. The x-axis plots the average mortgage payment per month in 2019 by province. The y-axis plots the average mortgage terms in 2019 by province. The chart shows that lower monthly mortgage payment is associated with longer mortgage terms. In Jakarta, however, the average payment was unusually high at Rp 6 million per month, while the mortgage terms averaged at 10.64 years." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<h2 id="factory-imports-show-recovery-uncertainty">Factory imports show recovery uncertainty</h2>
+<h2 id="factory-imports-show-recovery-uncertainty">Factory imports show
+recovery uncertainty</h2>
 <p>July 1, 2021</p>
-<p>Read the story on <a href="https://www.thejakartapost.com/paper/2021/06/30/factory-imports-show-recovery-uncertainty.html">this link</a>.</p>
-<p>This chart shows that imports of raw materials and capital goods had not shown a promising sign of recovery as of April 2021. While imports of raw materials continued to pick up pace, imports of capital goods did not.</p>
+<p>Read the story on <a
+href="https://www.thejakartapost.com/paper/2021/06/30/factory-imports-show-recovery-uncertainty.html">this
+link</a>.</p>
+<p>This chart shows that imports of raw materials and capital goods had
+not shown a promising sign of recovery as of April 2021. While imports
+of raw materials continued to pick up pace, imports of capital goods did
+not.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/import-contribution-change.png" title="A stacked-column chart with two panels based on imports data between January 2018 and April 2021 from BI and my analysis. The left-hand panel plots the contribution to the year-on-year growth of raw material imports by category. The left-hand panel shows that raw material imports, driven by industrial supplies and fuels, had been growing steadily up to April. The right-hand panel plots the same metric for capital goods imports. The right-hand panel shows that the capital goods imports had not shown a similar sign of recovery as it grew much slower in April than a month earlier." alt="A stacked-column chart with two panels based on imports data between January 2018 and April 2021 from BI and my analysis. The left-hand panel plots the contribution to the year-on-year growth of raw material imports by category. The left-hand panel shows that raw material imports, driven by industrial supplies and fuels, had been growing steadily up to April. The right-hand panel plots the same metric for capital goods imports. The right-hand panel shows that the capital goods imports had not shown a similar sign of recovery as it grew much slower in April than a month earlier." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<h2 id="wealth-gap-narrows-in-indonesia-as-stock-market-slumps-house-prices-grow">Wealth gap narrows in Indonesia as stock market slumps, house prices grow</h2>
+<h2
+id="wealth-gap-narrows-in-indonesia-as-stock-market-slumps-house-prices-grow">Wealth
+gap narrows in Indonesia as stock market slumps, house prices grow</h2>
 <p>July 12, 2021</p>
-<p>Read the story on <a href="https://www.thejakartapost.com/news/2021/07/12/wealth-gap-narrows-in-indonesia-as-stock-market-slumps-house-prices-grow.html">this link</a>.</p>
-<p>The first chart in this story shows the estimated wealth distribution in Indonesia between 2019 and 2020. As the share of wealth of the bottom 40 percent slightly expanded while that of the richest 10 percent shrank, the wealth gap was estimated to narrow.</p>
+<p>Read the story on <a
+href="https://www.thejakartapost.com/news/2021/07/12/wealth-gap-narrows-in-indonesia-as-stock-market-slumps-house-prices-grow.html">this
+link</a>.</p>
+<p>The first chart in this story shows the estimated wealth distribution
+in Indonesia between 2019 and 2020. As the share of wealth of the bottom
+40 percent slightly expanded while that of the richest 10 percent
+shrank, the wealth gap was estimated to narrow.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/wealth-distribution.png" title="A line chart that plots the wealth distribution between 2019 and 2020 in Indonesia based on estimates from Credit Suisse and my analysis. The x-axis plots the cumulative share of adult population from poorest to wealthiest. The y-axis plots the cumulative share of wealth. The chart also includes a 45-degree diagonal line that reflects equal distribution of wealth. The area between the lines of wealth distribution and the diagonal line represents inequality. The chart shows that the wealth gap was estimated to have narrowed in 2020 as the share of wealth of the richet 10 percent declined. The area that represents inequality thus shrank as well." alt="A line chart that plots the wealth distribution between 2019 and 2020 in Indonesia based on estimates from Credit Suisse and my analysis. The x-axis plots the cumulative share of adult population from poorest to wealthiest. The y-axis plots the cumulative share of wealth. The chart also includes a 45-degree diagonal line that reflects equal distribution of wealth. The area between the lines of wealth distribution and the diagonal line represents inequality. The chart shows that the wealth gap was estimated to have narrowed in 2020 as the share of wealth of the richet 10 percent declined. The area that represents inequality thus shrank as well." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<p>The second chart shows that wealth per adult in Indonesia continued to grow despite at a slower pace during the pandemic. The growth hinged largely on nonfinancial assets like houses.</p>
+<p>The second chart shows that wealth per adult in Indonesia continued
+to grow despite at a slower pace during the pandemic. The growth hinged
+largely on nonfinancial assets like houses.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/wealth-contribution-growth.png" title="A stacked-column chart that plots the contribution to year-on-year growth in net wealth per adult by asset between 2001 and 2020 based on estimates from Credit Suisse and my analysis. The chart shows that wealth still grew during the pandemic in 2020, although at a much slower pace than a year earlier, driven by nonfinancial assets like houses." alt="A stacked-column chart that plots the contribution to year-on-year growth in net wealth per adult by asset between 2001 and 2020 based on estimates from Credit Suisse and my analysis. The chart shows that wealth still grew during the pandemic in 2020, although at a much slower pace than a year earlier, driven by nonfinancial assets like houses." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<h2 id="slow-vaccination-takes-toll-on-indonesia-in-uneven-global-recovery">Slow vaccination takes toll on Indonesia in uneven global recovery</h2>
+<h2
+id="slow-vaccination-takes-toll-on-indonesia-in-uneven-global-recovery">Slow
+vaccination takes toll on Indonesia in uneven global recovery</h2>
 <p>August 1, 2021</p>
-<p>Read the story on <a href="https://www.thejakartapost.com/news/2021/08/01/slow-vaccination-takes-toll-on-indonesia-in-uneven-global-recovery.html">this link</a>.</p>
-<p>The first chart in this story shows that the International Monetary Fund (IMF) revised downward the 2021 economic growth forecast for Indonesia in its July outlook from the previous one. Indonesia joined other countries with a downward revision, such as India and neighboring Malaysia.</p>
+<p>Read the story on <a
+href="https://www.thejakartapost.com/news/2021/08/01/slow-vaccination-takes-toll-on-indonesia-in-uneven-global-recovery.html">this
+link</a>.</p>
+<p>The first chart in this story shows that the International Monetary
+Fund (IMF) revised downward the 2021 economic growth forecast for
+Indonesia in its July outlook from the previous one. Indonesia joined
+other countries with a downward revision, such as India and neighboring
+Malaysia.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/weo-revision.png" title="A dot plot with two panels that charts the revision in economic growth forecast for 2021 for selected countries between the April and July outlook from the International Monetary Fund (IMF). The right-hand panel shows countries with upward revision and the left-hand panel countries with downward revision. Indonesia belongs to the group of countries with downward revision." alt="A dot plot with two panels that charts the revision in economic growth forecast for 2021 for selected countries between the April and July outlook from the International Monetary Fund (IMF). The right-hand panel shows countries with upward revision and the left-hand panel countries with downward revision. Indonesia belongs to the group of countries with downward revision." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<p>The second chart shows that Indonesia, like other low and lower-middle income countries, was falling behind its richer peers in inoculating its citizens against COVID-19. This trend is associated with the growth outlook.</p>
+<p>The second chart shows that Indonesia, like other low and
+lower-middle income countries, was falling behind its richer peers in
+inoculating its citizens against COVID-19. This trend is associated with
+the growth outlook.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/vaccination-rate-income-group.png" title="A dot plot that shows the share of population vaccinated against COVID-19 at the latest date available for each country as of July 31, 2021, by income group based on data from Our World in Data (OWID) and the World Bank. The x-axis plots the income group and the y-axis the vaccination rate. The chart also includes dahsed lines representing the median vaccination rate of each income group. The chart shows that richer countries had vaccinated a larger share of their population than their low income peers. Indonesia, a low-middle income country, was also falling behind. This trend in vaccination by income group is correlated with the trend seen in the economic growth outlook." alt="A dot plot that shows the share of population vaccinated against COVID-19 at the latest date available for each country as of July 31, 2021, by income group based on data from Our World in Data (OWID) and the World Bank. The x-axis plots the income group and the y-axis the vaccination rate. The chart also includes dahsed lines representing the median vaccination rate of each income group. The chart shows that richer countries had vaccinated a larger share of their population than their low income peers. Indonesia, a low-middle income country, was also falling behind. This trend in vaccination by income group is correlated with the trend seen in the economic growth outlook." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<h2 id="emergency-curbs-reverse-recovery-in-consumer-confidence-retail-sales">Emergency curbs reverse recovery in consumer confidence, retail sales</h2>
+<h2
+id="emergency-curbs-reverse-recovery-in-consumer-confidence-retail-sales">Emergency
+curbs reverse recovery in consumer confidence, retail sales</h2>
 <p>August 12, 2021</p>
-<p>Read the story on <a href="https://www.thejakartapost.com/news/2021/08/12/emergency-curbs-reverse-recovery-in-consumer-confidence-retail-sales.html">this link</a>.</p>
-<p>The first chart in this story shows that the Delta wave, which peaked in July 2021, interrupted the recovery in consumer confidence and retail sales. The consumer confidence index fell back to a level nearly as pessimistic as in October 2020. The retail sales index also contracted again compared with a year earlier.</p>
+<p>Read the story on <a
+href="https://www.thejakartapost.com/news/2021/08/12/emergency-curbs-reverse-recovery-in-consumer-confidence-retail-sales.html">this
+link</a>.</p>
+<p>The first chart in this story shows that the Delta wave, which peaked
+in July 2021, interrupted the recovery in consumer confidence and retail
+sales. The consumer confidence index fell back to a level nearly as
+pessimistic as in October 2020. The retail sales index also contracted
+again compared with a year earlier.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/consumer-confidence-retail-sales.png" title="A line chart with two panels based on data from BI. The left-hand panel plots the consumer confidence index (CCI) between January 2017 and July 2021. The left-hand panel shows that the CCI fell in July to nearly 80, a level almost as pessimistic as in October 2020, as a result of the Delta wave of COVID-19 and the emergency curbs. The right-hand panel plots the retail sales index (RSI) over the same period. The RSI contracted again in July, but not as deep as during the first large-scale social restrictions in 2020, in part thanks to the base effect. This chart shows that the Delta wave and the emergency curbs reversed the recovery among consumers and retailers seen in both indicators." alt="A line chart with two panels based on data from BI. The left-hand panel plots the consumer confidence index (CCI) between January 2017 and July 2021. The left-hand panel shows that the CCI fell in July to nearly 80, a level almost as pessimistic as in October 2020, as a result of the Delta wave of COVID-19 and the emergency curbs. The right-hand panel plots the retail sales index (RSI) over the same period. The RSI contracted again in July, but not as deep as during the first large-scale social restrictions in 2020, in part thanks to the base effect. This chart shows that the Delta wave and the emergency curbs reversed the recovery among consumers and retailers seen in both indicators." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<p>The next chart shows that visitors to retail and recreation places started declining in June, even before the government tightened mobility restrictions as cases surged, especially in Java and Bali.</p>
+<p>The next chart shows that visitors to retail and recreation places
+started declining in June, even before the government tightened mobility
+restrictions as cases surged, especially in Java and Bali.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/mobility-covid.png" title="A chart with two panels based on data from Google, the COVID-19 task force, BPS and my analysis. The left-hand panel is a line chart that plots the change in visitors to retail and recreation places between March 2020 and August 2021 by region, weighted by population of each region and smoothed to seven-day moving averages. The right-hand panel is a scatter plot. The x-axis plots the cumulative confirmed COVID-19 cases per 1 million people by province on a log scale. The y-axis plots the mobility to retail and recreation places by province. Together, this chart shows that mobility to retail and recreation places had actually started falling in June, even before the government tightened restrictions in July as cases surged. Mobility in Java and Bali fell more sharply than in other regions." alt="A chart with two panels based on data from Google, the COVID-19 task force, BPS and my analysis. The left-hand panel is a line chart that plots the change in visitors to retail and recreation places between March 2020 and August 2021 by region, weighted by population of each region and smoothed to seven-day moving averages. The right-hand panel is a scatter plot. The x-axis plots the cumulative confirmed COVID-19 cases per 1 million people by province on a log scale. The y-axis plots the mobility to retail and recreation places by province. Together, this chart shows that mobility to retail and recreation places had actually started falling in June, even before the government tightened restrictions in July as cases surged. Mobility in Java and Bali fell more sharply than in other regions." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<h2 id="indonesia-lags-behind-in-decoupling-economic-and-emission-growth">Indonesia lags behind in decoupling economic and emission growth</h2>
+<h2
+id="indonesia-lags-behind-in-decoupling-economic-and-emission-growth">Indonesia
+lags behind in decoupling economic and emission growth</h2>
 <p>September 5, 2021</p>
-<p>Read the story on <a href="https://www.thejakartapost.com/news/2021/09/03/indonesia-lags-behind-in-decoupling-economic-and-emissions-growth.html">this link</a>.</p>
-<p>The first chart in this story shows that Indonesia had not been able to grow its economy without slowing down both production and consumption-based CO2 emissions between 1990 and 2020. Meanwhile, other countries had managed to do so. Some countries, such as Singapore, developed their economy while reducing its emissions.</p>
+<p>Read the story on <a
+href="https://www.thejakartapost.com/news/2021/09/03/indonesia-lags-behind-in-decoupling-economic-and-emissions-growth.html">this
+link</a>.</p>
+<p>The first chart in this story shows that Indonesia had not been able
+to grow its economy without slowing down both production and
+consumption-based CO2 emissions between 1990 and 2020. Meanwhile, other
+countries had managed to do so. Some countries, such as Singapore,
+developed their economy while reducing its emissions.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/emission-economic-growth.png" title="A line chart with four panels based on data from Our World in Data, the Global Carbon Project, United Nations (UN) and my analysis. The chart covers four countries, namely India, Indonesia, Singapore and the United States (US). Each panel shows data for each country. The chart plots real GDP per capita and production and consumption-based CO2 emissions per capita between 1990 and 2020, indexed to 1990. The chart shows that Indonesia was lagging behind the other three countries in decoupling economic growth from emission growth. Singapore and the US even managed to reduce their emission while developing their economy, respectively." alt="A line chart with four panels based on data from Our World in Data, the Global Carbon Project, United Nations (UN) and my analysis. The chart covers four countries, namely India, Indonesia, Singapore and the United States (US). Each panel shows data for each country. The chart plots real GDP per capita and production and consumption-based CO2 emissions per capita between 1990 and 2020, indexed to 1990. The chart shows that Indonesia was lagging behind the other three countries in decoupling economic growth from emission growth. Singapore and the US even managed to reduce their emission while developing their economy, respectively." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<p>The following chart shows that Indonesia’s human development index (HDI) might be below the threshold of high-human development if we accounted for emission and material footprint.</p>
+<p>The following chart shows that Indonesia’s human development index
+(HDI) might be below the threshold of high-human development if we
+accounted for emission and material footprint.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/phdi.png" title="A line chart that plots the human development index (HDI) and planetary pressures-adjusted HDI (PHDI) between 1990 and 2019 based on data from the UN and my analysis. The chart shows that while the HDI stood in 2019 above the 0.7 threshold for high human development, the PHDI did not. This reflects that CO2 emission and material footprint, which together created the planetary pressure adjustment, discounted the country's human development progress." alt="A line chart that plots the human development index (HDI) and planetary pressures-adjusted HDI (PHDI) between 1990 and 2019 based on data from the UN and my analysis. The chart shows that while the HDI stood in 2019 above the 0.7 threshold for high human development, the PHDI did not. This reflects that CO2 emission and material footprint, which together created the planetary pressure adjustment, discounted the country's human development progress." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<h2 id="majority-of-affluent-indonesians-plan-to-retire-early">Majority of affluent Indonesians plan to retire early</h2>
+<h2 id="majority-of-affluent-indonesians-plan-to-retire-early">Majority
+of affluent Indonesians plan to retire early</h2>
 <p>December 11, 2021</p>
-<p>Read the story on <a href="https://www.thejakartapost.com/business/2021/12/10/majority-of-affluent-indonesians-plan-to-retire-early.html">this link</a>.</p>
-<p>This chart shows that the share of affluent individuals planning to retire before turning 65 was highest in Indonesia among the surveyed countries. As a result, the share of these individuals who had not started saving or investing for retirement was very low in the country.</p>
+<p>Read the story on <a
+href="https://www.thejakartapost.com/business/2021/12/10/majority-of-affluent-indonesians-plan-to-retire-early.html">this
+link</a>.</p>
+<p>This chart shows that the share of affluent individuals planning to
+retire before turning 65 was highest in Indonesia among the surveyed
+countries. As a result, the share of these individuals who had not
+started saving or investing for retirement was very low in the
+country.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/retirement.png" title="A dot plot with two panels based on 2021 survey data from Standard Chartered and my analysis. The left-hand panel plots the share of affluent individuals looking to retire before turning 65 by country. The left-hand panel shows that Indonesia had the highest share of such respondents at close to 60 percent. The right-hand panel plots the share of affluent individuals who haven't started saving or investing for retirement by country. The right-hand panel shows that Indonesia had the second-lowest of such respondets at less than 20 percent." alt="A dot plot with two panels based on 2021 survey data from Standard Chartered and my analysis. The left-hand panel plots the share of affluent individuals looking to retire before turning 65 by country. The left-hand panel shows that Indonesia had the highest share of such respondents at close to 60 percent. The right-hand panel plots the share of affluent individuals who haven't started saving or investing for retirement by country. The right-hand panel shows that Indonesia had the second-lowest of such respondets at less than 20 percent." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<h2 id="yearender-2021-how-the-delta-wave-disrupted-indonesias-economic-recovery">Yearender 2021: How the Delta wave disrupted Indonesia’s economic recovery</h2>
+<h2
+id="yearender-2021-how-the-delta-wave-disrupted-indonesias-economic-recovery">Yearender
+2021: How the Delta wave disrupted Indonesia’s economic recovery</h2>
 <p>December 26, 2021</p>
-<p>Read the story on <a href="https://www.thejakartapost.com/business/2021/12/25/year-ender-how-the-delta-wave-disrupted-indonesias-economic-recovery.html">this link</a>.</p>
-<p>This chart shows how the Delta wave hit Indonesia when the rate of vaccination against the virus was still very low. This forced the government to tighten mobility restrictions. As a result, the country recorded a slower economic growth in the July to September period in 2021 than the previous quarter.</p>
+<p>Read the story on <a
+href="https://www.thejakartapost.com/business/2021/12/25/year-ender-how-the-delta-wave-disrupted-indonesias-economic-recovery.html">this
+link</a>.</p>
+<p>This chart shows how the Delta wave hit Indonesia when the rate of
+vaccination against the virus was still very low. This forced the
+government to tighten mobility restrictions. As a result, the country
+recorded a slower economic growth in the July to September period in
+2021 than the previous quarter.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/delta-wave-impact.png" title="A chart with four panels based on data from OWID, Google, BPS and my analysis. The first panel plots the daily new confirmed COVID-19 cases smoothed to seven-day moving averages. The second panel plots the share of people fully vaccinated against coronavirus. The third panel plots the mobility to retail and recretaion places, workplaces and transit stations smoothed to seven-day moving averages. The fourth panel plots the year-on-year growth of real GDP. Together, this chart shows that the Delta wave disrupted the country's economic recovery because it peaked when the vaccination rate was very low at less than 10 percent, thus prompting the government to tighten mobility curbs." alt="A chart with four panels based on data from OWID, Google, BPS and my analysis. The first panel plots the daily new confirmed COVID-19 cases smoothed to seven-day moving averages. The second panel plots the share of people fully vaccinated against coronavirus. The third panel plots the mobility to retail and recretaion places, workplaces and transit stations smoothed to seven-day moving averages. The fourth panel plots the year-on-year growth of real GDP. Together, this chart shows that the Delta wave disrupted the country's economic recovery because it peaked when the vaccination rate was very low at less than 10 percent, thus prompting the government to tighten mobility curbs." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<h2 id="how-china-beats-us-as-trade-investment-partner-for-indonesia">How China beats US as trade, investment partner for Indonesia</h2>
+<h2
+id="how-china-beats-us-as-trade-investment-partner-for-indonesia">How
+China beats US as trade, investment partner for Indonesia</h2>
 <p>January 4, 2022</p>
-<p>Read the story on <a href="https://www.thejakartapost.com/business/2022/01/03/how-china-beats-us-as-trade-investment-partner-for-indonesia.html">this link</a>.</p>
-<p>The first chart in this story shows that the share of Indonesia’s exports to and imports from China started growing in early 2000s, following the latter’s accession to the World Trade Organization (WTO). By late 2000s, the share of trade with China was larger than that with the United States (US).</p>
+<p>Read the story on <a
+href="https://www.thejakartapost.com/business/2022/01/03/how-china-beats-us-as-trade-investment-partner-for-indonesia.html">this
+link</a>.</p>
+<p>The first chart in this story shows that the share of Indonesia’s
+exports to and imports from China started growing in early 2000s,
+following the latter’s accession to the World Trade Organization (WTO).
+By late 2000s, the share of trade with China was larger than that with
+the United States (US).</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/trade-share-china-us-other.png" title="A stacked-area chart with two panels based on trade data with China, the US and other countries between 1989 and 2020 from the UN and my analysis. The left-hand panel plots the share of Indonesia's goods exports. The right-hand panel plots the same metric for goods imports. Together, this chart shows that the proportion of exports to and imports from China started expanding rapidly since that country joined the World Trade Organization in 2001. China became Indonesia's largest trading partner by late 2000s, overtaking the US." alt="A stacked-area chart with two panels based on trade data with China, the US and other countries between 1989 and 2020 from the UN and my analysis. The left-hand panel plots the share of Indonesia's goods exports. The right-hand panel plots the same metric for goods imports. Together, this chart shows that the proportion of exports to and imports from China started expanding rapidly since that country joined the World Trade Organization in 2001. China became Indonesia's largest trading partner by late 2000s, overtaking the US." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<p>The next chart shows that net foreign direct investment (FDI) flow from China to Indonesia largely remained positive between 2010 and 2020. Meanwhile, the flow from the US showed a downward trend in general.</p>
+<p>The next chart shows that net foreign direct investment (FDI) flow
+from China to Indonesia largely remained positive between 2010 and 2020.
+Meanwhile, the flow from the US showed a downward trend in general.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/fdi-china-us.png" title="A line chart that plots the net foreign direct investment (FDI) flow to Indonesia from China and the US between 2010 and 2020 based on data from BI. The chart shows that the net FDI from China was largely on a positive trend, while that from the US was on a downward trend." alt="A line chart that plots the net foreign direct investment (FDI) flow to Indonesia from China and the US between 2010 and 2020 based on data from BI. The chart shows that the net FDI from China was largely on a positive trend, while that from the US was on a downward trend." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<h2 id="domestic-travelers-not-enough-to-revive-bali-tourism">Domestic travelers ‘not enough’ to revive Bali tourism</h2>
+<h2 id="domestic-travelers-not-enough-to-revive-bali-tourism">Domestic
+travelers ‘not enough’ to revive Bali tourism</h2>
 <p>January 18, 2022</p>
-<p>Read the story on <a href="https://www.thejakartapost.com/business/2022/01/18/domestic-travelers-not-enough-to-revive-bali-tourism.html">this link</a>.</p>
-<p>This chart shows the large share of foreign guests at star-rated and other hotels in Bali in 2019. As a popular international tourist destination, the province was heavily dependent on foreign tourists.</p>
+<p>Read the story on <a
+href="https://www.thejakartapost.com/business/2022/01/18/domestic-travelers-not-enough-to-revive-bali-tourism.html">this
+link</a>.</p>
+<p>This chart shows the large share of foreign guests at star-rated and
+other hotels in Bali in 2019. As a popular international tourist
+destination, the province was heavily dependent on foreign tourists.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/foreign-guest-share.png" title="A bar chart that plots the share of foreign guests at star-rated and other hotels in 2019 among top 10 provinces based on data from BPS and my analysis. The chart shows that foreign guests accounted for nearly 60 percent of the total in Bali. It is far higher than other provinces. This indicates the province's reliance on foreign tourists to revive its tourism-driven economy from the pandemic." alt="A bar chart that plots the share of foreign guests at star-rated and other hotels in 2019 among top 10 provinces based on data from BPS and my analysis. The chart shows that foreign guests accounted for nearly 60 percent of the total in Bali. It is far higher than other provinces. This indicates the province's reliance on foreign tourists to revive its tourism-driven economy from the pandemic." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<h2 id="covid-19-expedites-deindustrialization-in-indonesia">COVID-19 expedites deindustrialization in Indonesia</h2>
+<h2 id="covid-19-expedites-deindustrialization-in-indonesia">COVID-19
+expedites deindustrialization in Indonesia</h2>
 <p>February 9, 2022</p>
-<p>Read the story on <a href="https://www.thejakartapost.com/business/2022/02/08/covid-19-expedites-deindustrialization-in-indonesia.html">this link</a>.</p>
-<p>This chart shows the premature deindustrialization that started taking place in Indonesia in mid-2000s, as suggested by the share of manufacturing value added in real gross domestic product (GDP), and how the pandemic worsened it.</p>
+<p>Read the story on <a
+href="https://www.thejakartapost.com/business/2022/02/08/covid-19-expedites-deindustrialization-in-indonesia.html">this
+link</a>.</p>
+<p>This chart shows the premature deindustrialization that started
+taking place in Indonesia in mid-2000s, as suggested by the share of
+manufacturing value added in real gross domestic product (GDP), and how
+the pandemic worsened it.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/manufacturing-value-added-share.png" title="A line chart that plots the share of manufacturing value added in GDP at 2015 prices in US dollars between 1970 and 2020 based on data from the UN and my analysis. The chart shows that Indonesia had started seeing a premature deindustrialization at least since mid-2000s, when the share of manufacturing value added in GDP peaked at 23.68 percent and started declining steadily ever since. The COVID-19 pandemic worsened this trend." alt="A line chart that plots the share of manufacturing value added in GDP at 2015 prices in US dollars between 1970 and 2020 based on data from the UN and my analysis. The chart shows that Indonesia had started seeing a premature deindustrialization at least since mid-2000s, when the share of manufacturing value added in GDP peaked at 23.68 percent and started declining steadily ever since. The COVID-19 pandemic worsened this trend." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<h2 id="covid-19-pulls-more-workers-into-low-paying-service-sector-jobs">COVID-19 pulls more workers into low-paying service sector jobs</h2>
+<h2
+id="covid-19-pulls-more-workers-into-low-paying-service-sector-jobs">COVID-19
+pulls more workers into low-paying service sector jobs</h2>
 <p>March 5, 2022</p>
-<p>Read the story on <a href="https://www.thejakartapost.com/business/2022/03/04/covid-19-pulls-more-workers-into-low-paying-service-sector-jobs.html">this link</a>.</p>
-<p>This chart shows that most Indonesian workers in services had less than a college educational attainment in 2021. These workers were concentrated in traditional and low-paying sectors, such as accommodation and food service activities, transportation and storage, and wholesale and retail trade.</p>
+<p>Read the story on <a
+href="https://www.thejakartapost.com/business/2022/03/04/covid-19-pulls-more-workers-into-low-paying-service-sector-jobs.html">this
+link</a>.</p>
+<p>This chart shows that most Indonesian workers in services had less
+than a college educational attainment in 2021. These workers were
+concentrated in traditional and low-paying sectors, such as
+accommodation and food service activities, transportation and storage,
+and wholesale and retail trade.</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="images/labor-service-sector-distribution-by-education.png" title="A stacked-bar chart that plots the distribution of workers in services by sector and educational attainment in 2021 based on data from BPS and my analysis. The chart shows that most workers in traditional service sectors, such as accommodation and food service activities, did not have a college degree. In the transportation and storage sector, for example, most workers were senior high school graduates." alt="A stacked-bar chart that plots the distribution of workers in services by sector and educational attainment in 2021 based on data from BPS and my analysis. The chart shows that most workers in traditional service sectors, such as accommodation and food service activities, did not have a college degree. In the transportation and storage sector, for example, most workers were senior high school graduates." width="100%" style="display: block; margin: auto;" /></p>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <div class="article-footer">
   <p class="social_footer">
