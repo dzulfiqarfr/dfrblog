@@ -1,5 +1,5 @@
 ---
-title: "Dzulfiqar Fathur Rahman"
+title: "dfrblog"
 image: "images/profile-photo.jpeg"
 links:
   - label: LinkedIn

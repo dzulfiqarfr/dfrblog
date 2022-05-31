@@ -47,7 +47,7 @@ Set data ini memberikan kami 2.900 lagu secara keseluruhan. Daftar putar yang ka
 
 Lagu-lagu tersebut tidak unik. Walaupun proses pembersihan data pada umumnya menyingkirkan duplikat, kami membiarkannya karena pendengar di Indonesia dan Afrika Selatan mungkin sering memutar lagu yang sama. Lagu "As It Was" dari Harry Styles, misalnya, muncul di 55 daftar putar Lagu Teratas.
 
-Kedua, kami menggunakan fasilitas pencarian di Spotify untuk mengumpulkan lagu-lagu sekaligus mengelompokkannya secara longgar menurut genre. Kami menggunakan masing-masing genre sebagai kata kunci. Kemudian kami mengarahkan pencariannya ke daftar putar yang berkaitan dengan genre tersebut, baik yang dikurasi oleh Spotify ataupun pengguna.
+Kedua, kami menggunakan fasilitas pencarian di Spotify untuk mengumpulkan lagu-lagu sekaligus mengelompokkannya secara longgar menurut genre. Kami menggunakan masing-masing genre sebagai kata kunci. Kami mengarahkan pencariannya ke daftar putar yang berkaitan dengan genre tersebut, baik yang dikurasi oleh Spotify ataupun pengguna.
 
 Ada beberapa pengaturan yang penting terkait pencariannya. Pertama, kami hanya mengumpulkan lagu-lagu (dari berbagai musisi di berbagai negara) yang tersedia di pasar Indonesia. Kedua, kami membatasi hasil pencariannya ke 50 daftar lagu yang pertama muncul untuk masing-masing genre. Ketiga, kami hanya mengumpulkan 100 lagu pertama dari setiap daftar putar.
 
