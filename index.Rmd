@@ -15,6 +15,11 @@ output:
   postcards::trestles
 ---
 
+<script type="text/javascript">
+    const div = document.querySelectorAll("div");
+    div[11].style["overflow-y"] = "hidden"; // Remove the scrollbar
+</script>
+
 ## Data journalist
 
 Hi! Currently, I analyze data and make charts to tell stories at [Katadata, a Central Jakarta-based media focusing on economic news](https://katadata.co.id/analisisdata). I cover various datasets, ranging from [cooking oil prices](https://katadata.co.id/ariayudhistira/analisisdata/62592d926bc52/daerah-mana-paling-tertekan-lonjakan-harga-minyak-goreng) to [the mood of songs on Spotify](https://katadata.co.id/ariayudhistira/analisisdata/6287a5383c274/selera-musik-di-indonesia-cenderung-lagu-sedih).
