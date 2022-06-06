@@ -16,8 +16,8 @@ output:
 ---
 
 <script type="text/javascript">
-    const div = document.querySelectorAll("div");
-    div[11].style["overflow-y"] = "hidden"; // Remove the scrollbar
+    const postcardDivAll = document.querySelectorAll("div");
+    postcardDivAll[11].style["overflow-y"] = "hidden"; // Remove the scrollbar
 </script>
 
 ## Data journalist
