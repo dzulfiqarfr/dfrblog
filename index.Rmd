@@ -1,5 +1,5 @@
 ---
-title: "dfrblog"
+title: "Dzulfiqar Fathur Rahman"
 image: "images/profile-photo.jpeg"
 links:
   - label: LinkedIn
@@ -12,7 +12,17 @@ links:
     url: "mailto:contact@dzulfiqarfr.com"
 site: distill::distill_website
 output:
-  postcards::jolla
+  postcards::trestles
 ---
- 
-I am a data journalist at Katadata. Currently, I live in Bekasi, West Java, Indonesia. I mostly use R to wrangle, analyze and visualize data to tell stories that affect both people and businesses
+
+## Data journalist
+
+Hi! Currently, I analyze data and make charts to tell stories at [Katadata, a Central Jakarta-based media focusing on economic news](https://katadata.co.id/analisisdata). I cover various datasets, ranging from [cooking oil prices](https://katadata.co.id/ariayudhistira/analisisdata/62592d926bc52/daerah-mana-paling-tertekan-lonjakan-harga-minyak-goreng) to [the mood of songs on Spotify](https://katadata.co.id/ariayudhistira/analisisdata/6287a5383c274/selera-musik-di-indonesia-cenderung-lagu-sedih).
+
+Prior to this, I covered business and economic news for [The Jakarta Post, a leading English-speaking media based in Central Jakarta](https://thejakartapost.com), between <time datetime="2019-10">October 2019</time> and <time datetime="2022-03">March 2022</time>.
+
+I also take side gigs. My latest was analyzing a survey on digital skills of the youth in Southeast Asia for [LOKA Group, a nonprofit research consultancy](https://www.instagram.com/ceritaloka/)—which served the ASEAN Foundation as the client in this project. I worked on this project between <time datetime="2021-10">October 2021</time> and <time datetime="2022-04">April 2022</time>.
+
+I have given virtual talks about data journalism to a summer course at Universitas Diponegoro, a student publication at Universitas Pelita Harapan and a student executive body at Universitas Indonesia.
+
+Why, yes, I code—mostly in R.
